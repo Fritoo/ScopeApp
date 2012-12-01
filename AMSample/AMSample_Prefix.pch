@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'AMSample' target in the 'AMSample' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+
+#define NUM_SLIDE_SHOW_PAGES 5
+#define SLIDE_SHOW_PAGE_WIDTH 280
+#define SLIDE_SHOW_INTERVAL 1.2
+#define IMAGE_GROW_DURATION 0.15
+
+#define PORTRAIT_SCOPE_RECT CGRectMake (0,0,320,444)
+#define STR_LINK_URL [NSURL URLWithString:@"http://www.schooltr.com/index.html"]
+#define MAIN_GALLERY_FOLDER_NAME @"Gallery"
+#define DEFAULT_ALBUM @"Scope Album"
+
+#define degreesToRadians(x) (M_PI * x / 180.0)
