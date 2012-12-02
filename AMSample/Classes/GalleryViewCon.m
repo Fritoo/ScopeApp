@@ -162,9 +162,9 @@
     
     
     NSError *anError = nil;
-    NSLog(@"%@", [bar.items objectAtIndex:0]);
-    UINavigationItem *temp = [bar.items objectAtIndex:0];
-    UIBarButtonItem *aTemp = [temp.rightBarButtonItems objectAtIndex:0];
+    NSLog(@"%@", (bar.items)[0]);
+    UINavigationItem *temp = (bar.items)[0];
+    UIBarButtonItem *aTemp = (temp.rightBarButtonItems)[0];
     
     
     //[UIImagePNGRepresentation(item.image) writeToFile:@"~/Desktop/AnImage.png" options:NSDataWritingAtomic error:&anError];
@@ -192,7 +192,7 @@
     
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
     
     
@@ -238,7 +238,7 @@
         
         //Get default file path for gallery
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *documentsDirectory = paths[0];
         NSString *fullPath;
 
         int i = 0;

@@ -54,7 +54,7 @@ didFinishSavingWithError:(NSError *)error
 	[capBtn addTarget:self action:@selector(savePicture) forControlEvents:UIControlEventTouchDown];
 	[self.view addSubview:capBtn];
 	
-	NSArray *items=[NSArray arrayWithObjects:@"Live",@"Freeze",nil];
+	NSArray *items=@[@"Live",@"Freeze"];
 	UISegmentedControl *segBtn=[[UISegmentedControl alloc] initWithItems:items];
 	segBtn.selectedSegmentIndex = 0;
 	segBtn.frame = CGRectMake(150,370,150,30);

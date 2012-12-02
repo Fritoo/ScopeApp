@@ -21,7 +21,7 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     
-    return [scrollView.subviews objectAtIndex:0];
+    return (scrollView.subviews)[0];
     
 }
 

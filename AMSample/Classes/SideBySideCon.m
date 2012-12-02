@@ -150,7 +150,7 @@
     
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
     
     fullPath = [fullPath stringByAppendingPathComponent:currentAlbumTitle];
@@ -239,7 +239,7 @@
             [clientImage setTag:88801+i];
             //[clientImage setImage:[UIImage imageNamed:@"slideShow_2"]];
             [clientImage setUserInteractionEnabled:YES];
-            [clientImage setImage: [UIImage imageWithContentsOfFile:[currentAlbumPath stringByAppendingPathComponent: [dirContents objectAtIndex:i]]]/*[UIImage imageNamed:@"slideShow_2"]*/ forState:UIControlStateNormal];
+            [clientImage setImage: [UIImage imageWithContentsOfFile:[currentAlbumPath stringByAppendingPathComponent: dirContents[i]]]/*[UIImage imageNamed:@"slideShow_2"]*/ forState:UIControlStateNormal];
             [clientImage addTarget:self action:@selector(pressedComparableImage:) forControlEvents:UIControlEventTouchUpInside];
             
             //[clientImage setOwner_: self];

@@ -7,10 +7,13 @@
 //
 
 #import "SplashAppTest.h"
+#import "AMAppTests.h"
+
+#define COLOR IRON
 
 @implementation SplashAppTest
 
-+ (void)executeApplicationTests {
+- (void)executeApplicationTests {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(testSplashLifeCycle)
@@ -22,11 +25,13 @@
 
 - (void)testSplashLifeCycle {
     
+    Log(@"Testing splash life cycle");
     float lifetime = 2.5f;
-    splash = [AMSplashScreen viewWithExpiration:lifetime];
+    splash = [AMSplashScreen viewWithExpiration:lifetime andFrame:[[UIScreen mainScreen] bounds]];
+    splash.backgroundColor = [UIColor greenColor];
     [[UIWindow mainWindow] addSubview:splash];
-    [NSTimer scheduledTimerWithTimeInterval:lifetime+1 target:self selector:@selector(assertSplash) userInfo:nil repeats:NO];
-    
+    NSTimer *timer = [NSTimer timerWithTimeInterval:lifetime+1 target:self selector:@selector(assertSplash) userInfo:nil repeats:NO];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     NSAssert(splash, @"Splash object returned nil.");
 }
 

@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SplashAppTest.h"
+#import "AMAppTests.h"
 
 int main(int argc, char *argv[]) {
     
 #if (defined(DEBUG) && APP_TESTS)
-    [SplashAppTest executeApplicationTests];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:[AMAppTests class]
+                                             selector:@selector(executeApplicationTests)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+
+//    [AMAppTests executeApplicationTests];
 #endif
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];

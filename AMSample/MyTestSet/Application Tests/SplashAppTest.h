@@ -16,7 +16,7 @@
 
 }
 
-+ (void)executeApplicationTests;
+- (void)executeApplicationTests;
 
 
 @end

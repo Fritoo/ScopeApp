@@ -70,7 +70,7 @@
 	MFMailComposeViewController *emailVC = [[MFMailComposeViewController alloc] init];
 	[emailVC setMailComposeDelegate:self];
 	[emailVC setSubject:@"School Tech Resources sign up!"];
-	[emailVC setToRecipients:[NSArray arrayWithObject:[NSString stringWithString:@"sales@strscopes.com"]]];
+	[emailVC setToRecipients:@[[NSString stringWithString:@"sales@strscopes.com"]]];
 	[emailVC setMessageBody:[NSString stringWithFormat:@"Please sign me up for special deals and promotions from School Technology Resources! \nPlease use this address: %@", emailField.text] isHTML:NO];
     
 	[self presentModalViewController:emailVC animated:YES];	

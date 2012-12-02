@@ -57,7 +57,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i < outCount; i++ ) {
         const char *propertyName = property_getName(propArray[i]);
-        [array addObject:[NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding]];
+        [array addObject:@(propertyName)];
     }
     
     return array;
@@ -92,7 +92,7 @@
         
         // Return type
         char *rType = method_copyReturnType(methodArray[i]);
-        NSString *returnType = [NSString stringWithCString:rType encoding:NSUTF8StringEncoding];
+        NSString *returnType = @(rType);
         
         
         // Arg types
@@ -110,7 +110,7 @@
         // any extra trailing spaces
         NSMutableArray *components = [[NSMutableArray alloc] initWithArray:[methodName componentsSeparatedByString:@":"]];
         for ( int n = 0; n < components.count; n++ ) {
-            NSString *item = [components objectAtIndex:n];
+            NSString *item = components[n];
             if ( [item isEqualToString:@""] ) {
                 [components removeObject:item];
             }
@@ -119,7 +119,7 @@
         // Get return type from Dictionary or
         // raw type if struct, etc.
         NSString *retHumanReadable;
-        NSString *retStore = [returnValues objectForKey:returnType];
+        NSString *retStore = returnValues[returnType];
         if ( returnType.length > 1 ) {
             retHumanReadable = returnType;
         } else {
@@ -137,10 +137,10 @@
         
         for ( int p = 0; p < components.count; p++ ) {
             
-            NSString *stringPiece = [[NSString alloc] initWithString:[components objectAtIndex:p]];
+            NSString *stringPiece = [[NSString alloc] initWithString:components[p]];
             
             // Add it back in with new info
-            NSString *argTypeAsNSString = [NSString stringWithCString:argType[p] encoding:NSUTF8StringEncoding];
+            NSString *argTypeAsNSString = @(argType[p]);
             NSString *retValFromDict;
             
             // C Structs and things give us their
@@ -150,7 +150,7 @@
             if ( argTypeAsNSString.length > 1 ) {
                 retValFromDict = argTypeAsNSString;
             } else {
-                retValFromDict = [returnValues objectForKey:argTypeAsNSString];
+                retValFromDict = returnValues[argTypeAsNSString];
             }
             
             if ( numArgs > 2 ) {
@@ -182,7 +182,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i < outCount; i++ ) {
         const char *ivarName = ivar_getName(ivarArray[i]);
-        [array addObject:[NSString stringWithCString:ivarName encoding:NSUTF8StringEncoding]];
+        [array addObject:@(ivarName)];
     }
     
     return array;

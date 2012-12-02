@@ -16,6 +16,6 @@
 }
 
 
-+ (AMSplashScreen *)viewWithExpiration:(float)lifetime;
++ (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm;
 
 @end

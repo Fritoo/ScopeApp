@@ -161,58 +161,58 @@
         
         if ( [argType isEqualToString:@"i"] ) {
             int *temp = (int*)arg;
-            number = [NSNumber numberWithInt:*temp];
+            number = @(*temp);
 
         } else if ( [argType isEqualToString:@"B"] ) {
             BOOL *temp = (BOOL*)arg;
-            number = [NSNumber numberWithBool:*temp];
+            number = @(*temp);
             
         } else if ( [argType isEqualToString:@"s"] ) {
             short *temp = (short*)arg;
-            number = [NSNumber numberWithShort:*temp];
+            number = @(*temp);
             
         } else if ( [argType isEqualToString:@"l"] ) {
             long *temp = (long*)arg;
-            number = [NSNumber numberWithLong:*temp];
+            number = @(*temp);
             
         } else if ( [argType isEqualToString:@"q"] ) {
             long long *temp = (long long*)arg;
-            number = [NSNumber numberWithLongLong:*temp];
+            number = @(*temp);
 
         
         } else if ( [argType isEqualToString:@"C"] ) {
             unsigned char *temp = (unsigned char*)arg;
-            number = [NSNumber numberWithUnsignedChar:*temp];
+            number = @(*temp);
 
         
         } else if ( [argType isEqualToString:@"I"] ) {
             unsigned int *temp = (unsigned int*)arg;
-            number = [NSNumber numberWithUnsignedInt:*temp];
+            number = @(*temp);
 
         
         } else if ( [argType isEqualToString:@"S"] ) {
             unsigned short *temp = (unsigned short*)arg;
-            number = [NSNumber numberWithUnsignedShort:*temp];
+            number = @(*temp);
             
             
         } else if ( [argType isEqualToString:@"L"] ) {
             unsigned long *temp = (unsigned long*)arg;
-            number = [NSNumber numberWithUnsignedLong:*temp];
+            number = @(*temp);
             
             
         } else if ( [argType isEqualToString:@"Q"] ) {
             unsigned long long *temp = (unsigned long long*)arg;
-            number = [NSNumber numberWithUnsignedLongLong:*temp];
+            number = @(*temp);
 
             
         } else if ( [argType isEqualToString:@"f"] ) {
             float *temp = (float *)arg;
-            number = [NSNumber numberWithFloat:*temp];
+            number = @(*temp);
             
             
         } else if ( [argType isEqualToString:@"d"] ) {
             double *temp = (double*)arg;
-            number = [NSNumber numberWithDouble:*temp];
+            number = @(*temp);
         }
         
         // Flip to string
@@ -222,7 +222,7 @@
         // This one is handled slightly differently
         if ( [argType isEqualToString:@"*"] ) {
             char *temp = (char*)arg;
-            string = [NSString stringWithCString:temp encoding:NSASCIIStringEncoding];
+            string = @(temp);
             
         } else if ( [argType isEqualToString:@"c"] ) {
             char *someChar = (char*)arg;

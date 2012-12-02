@@ -25,5 +25,6 @@
 
 - (IBAction)backButton;
 - (IBAction)pressedDoneButton:(id)sender;
+- (void)updateDisplay;
 
 @end

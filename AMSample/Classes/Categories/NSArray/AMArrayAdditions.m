@@ -19,7 +19,7 @@
     if ( ![self isIndexValid:0] ) {
         return nil;
     }
-    return [self objectAtIndex:0];
+    return self[0];
 }
 
 @end

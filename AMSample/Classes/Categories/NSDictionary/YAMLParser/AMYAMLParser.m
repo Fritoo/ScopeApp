@@ -72,7 +72,7 @@
 		for ( id key in keys ) {
             
             // Pull object from key
-            id obj = [containerObject objectForKey:key];
+            id obj = containerObject[key];
             
             // Is new object a container (dict or array)?
             int a1 = [obj respondsToSelector:@selector(arrayByAddingObject:)];

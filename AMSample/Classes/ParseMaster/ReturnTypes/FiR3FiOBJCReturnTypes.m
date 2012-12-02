@@ -14,7 +14,7 @@
 // Sugar
 + (NSString *)returnTypeAsStringForKey: (NSString *)key {
     
-    return [NSString stringWithCString:[self returnTypeForKey:key] encoding:NSUTF8StringEncoding];
+    return @([self returnTypeForKey:key]);
     
 }
 
@@ -25,14 +25,14 @@
     // human form of the type, and if the key exists
     NSDictionary *comparingDict = [FiR3FiOBJCReturnTypes returnTypesFromHumanKeys];
     if ( [comparingDict containsKey:key] ) {
-        return [[comparingDict objectForKey:key] cStringUsingEncoding:NSUTF8StringEncoding];
+        return [comparingDict[key] cStringUsingEncoding:NSUTF8StringEncoding];
     }
     
     // Check if the guy gave us the ObjC
     // encoding of the type, and if the key exists
     comparingDict = [FiR3FiOBJCReturnTypes returnTypesDictionary];
     if ( [comparingDict containsKey:key] ) {
-        return [[comparingDict objectForKey:key] cStringUsingEncoding:NSUTF8StringEncoding];
+        return [comparingDict[key] cStringUsingEncoding:NSUTF8StringEncoding];
     }
     
     // If neither case occurs return NULL

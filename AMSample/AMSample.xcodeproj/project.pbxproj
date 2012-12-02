@@ -110,6 +110,8 @@
 		625A5D1F166B1F6600F4CA32 /* AMYAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */; };
 		625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */; };
 		625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */; };
+		625A5D27166B22B500F4CA32 /* AMAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D26166B22B500F4CA32 /* AMAppTests.m */; };
+		625A5D28166B22B500F4CA32 /* AMAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D26166B22B500F4CA32 /* AMAppTests.m */; };
 		628042F11555F6C90087838D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628042F01555F6C90087838D /* SenTestingKit.framework */; };
 		628042F21555F6C90087838D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		628042F31555F6C90087838D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -261,6 +263,8 @@
 		625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYAMLParser.m; sourceTree = "<group>"; };
 		625A5D21166B1F8500F4CA32 /* AMSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSplashScreen.h; sourceTree = "<group>"; };
 		625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSplashScreen.m; sourceTree = "<group>"; };
+		625A5D25166B22B500F4CA32 /* AMAppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAppTests.h; sourceTree = "<group>"; };
+		625A5D26166B22B500F4CA32 /* AMAppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAppTests.m; sourceTree = "<group>"; };
 		628042EF1555F6C90087838D /* MyTestSet.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTestSet.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		628042F01555F6C90087838D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		628042F61555F6C90087838D /* MyTestSet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTestSet-Info.plist"; sourceTree = "<group>"; };
@@ -731,6 +735,8 @@
 			children = (
 				625A5D0D166B1F0B00F4CA32 /* SplashAppTest.h */,
 				625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */,
+				625A5D25166B22B500F4CA32 /* AMAppTests.h */,
+				625A5D26166B22B500F4CA32 /* AMAppTests.m */,
 			);
 			path = "Application Tests";
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				625A5D19166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */,
 				625A5D1E166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
 				625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
+				625A5D27166B22B500F4CA32 /* AMAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1009,7 @@
 				625A5D1A166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */,
 				625A5D1F166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
 				625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
+				625A5D28166B22B500F4CA32 /* AMAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1049,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"APP_TESTS=1",
 					DEBUG,
+					"AM_LOGGING=1",
 				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
@@ -1062,7 +1071,10 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AMSample_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RELEASE,
+					"AM_PROD_LOGGING=1",
+				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = AMSample;

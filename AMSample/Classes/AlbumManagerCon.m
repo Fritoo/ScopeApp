@@ -19,7 +19,7 @@
     
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -80,7 +80,7 @@
     
     // Configure the cell...
     if ( indexPath.row == 0 ) cell.accessoryView = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    cell.textLabel.text = [contentItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = contentItems[indexPath.row];
 
     return cell;
 
@@ -147,7 +147,7 @@
         
         
         if ( mainViewCon ) {
-            [mainViewCon setAlbumTitle:[contentItems objectAtIndex:indexPath.row]];
+            [mainViewCon setAlbumTitle:contentItems[indexPath.row]];
             if ( [mainViewCon isKindOfClass:[GalleryViewCon class]] ) { [mainViewCon updateDisplay]; } 
             
         }
@@ -199,7 +199,7 @@
     
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
     fullPath = [fullPath stringByAppendingPathComponent:albumName];
     
@@ -224,7 +224,7 @@
 - (NSString *)documentsDirectoryPath {
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
 
     return documentsDirectory;
 }
