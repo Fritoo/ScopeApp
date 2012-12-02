@@ -13,7 +13,6 @@
 @interface NSDictionary (SettingsDictionaries)
 
 - (BOOL)containsKey: (NSString *)key;
-- (int)hasChildren:(NSString *)key;
 - (NSString *)YAMLstring;
 
 @end

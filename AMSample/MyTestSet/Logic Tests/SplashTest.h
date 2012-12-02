@@ -8,6 +8,9 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface MyTestSet : SenTestCase
+
+@interface SplashTest : SenTestCase {
+    
+}
 
 @end

@@ -7,11 +7,12 @@
 //
 
 #import "AMObject.h"
+#import "AMSettings.h"
 
 #define COLOR CANTALOUPE
 
 @interface AMSettingsManager : AMObject
 
-
+@property (strong) AMSettings *settings;
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AMLogging.h"
+#import "AMConstants.h"
+#import "AMCategories.h"
 
 @interface AMObject : NSObject
 

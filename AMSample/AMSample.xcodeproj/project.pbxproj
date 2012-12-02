@@ -84,8 +84,8 @@
 		623EEB3D166A7C6A00C63152 /* NSObject+ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB2F166A7C6A00C63152 /* NSObject+ClassName.m */; };
 		623EEB3E166A7C6A00C63152 /* AMStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB32166A7C6A00C63152 /* AMStringContains.m */; };
 		623EEB3F166A7C6A00C63152 /* AMStringContains.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB32166A7C6A00C63152 /* AMStringContains.m */; };
-		623EEB40166A7C6A00C63152 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB34166A7C6A00C63152 /* NSString+MD5Addition.m */; };
-		623EEB41166A7C6A00C63152 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB34166A7C6A00C63152 /* NSString+MD5Addition.m */; };
+		623EEB40166A7C6A00C63152 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB34166A7C6A00C63152 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		623EEB41166A7C6A00C63152 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB34166A7C6A00C63152 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		623EEB42166A7C6A00C63152 /* AMURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB37166A7C6A00C63152 /* AMURLAdditions.m */; };
 		623EEB43166A7C6A00C63152 /* AMURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB37166A7C6A00C63152 /* AMURLAdditions.m */; };
 		623EEB4B166A7C7500C63152 /* AMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB4A166A7C7500C63152 /* AMLogger.m */; };
@@ -97,16 +97,38 @@
 		623EEB62166A7DA500C63152 /* AMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB5F166A7DA500C63152 /* AMSettings.m */; };
 		623EEB63166A7DA500C63152 /* AMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 623EEB5F166A7DA500C63152 /* AMSettings.m */; };
 		6251658F1516E42A004E9CC7 /* Border_frame_256w.png in Resources */ = {isa = PBXBuildFile; fileRef = 6251658E1516E42A004E9CC7 /* Border_frame_256w.png */; };
+		625A5CFF166B086200F4CA32 /* FiR3FiParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5CFB166B086200F4CA32 /* FiR3FiParseMaster.m */; };
+		625A5D00166B086200F4CA32 /* FiR3FiParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5CFB166B086200F4CA32 /* FiR3FiParseMaster.m */; };
+		625A5D01166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5CFE166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m */; };
+		625A5D02166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5CFE166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m */; };
+		625A5D12166B1F0B00F4CA32 /* SplashAppTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */; };
+		625A5D13166B1F0B00F4CA32 /* SplashAppTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */; };
+		625A5D15166B1F0B00F4CA32 /* SplashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D11166B1F0B00F4CA32 /* SplashTest.m */; };
+		625A5D19166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D18166B1F6000F4CA32 /* AMWindowAdditions.m */; };
+		625A5D1A166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D18166B1F6000F4CA32 /* AMWindowAdditions.m */; };
+		625A5D1E166B1F6600F4CA32 /* AMYAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */; };
+		625A5D1F166B1F6600F4CA32 /* AMYAMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */; };
+		625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */; };
+		625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */; };
 		628042F11555F6C90087838D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628042F01555F6C90087838D /* SenTestingKit.framework */; };
 		628042F21555F6C90087838D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		628042F31555F6C90087838D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		628042F91555F6C90087838D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 628042F71555F6C90087838D /* InfoPlist.strings */; };
-		628042FC1555F6C90087838D /* MyTestSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 628042FB1555F6C90087838D /* MyTestSet.m */; };
 		62DE7AE1154B6BD000C0C96F /* SavedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE7AE0154B6BD000C0C96F /* SavedImage.png */; };
 		FA65437711E1CD1300383A67 /* wait1a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437511E1CD1300383A67 /* wait1a.jpg */; };
 		FA65437811E1CD1300383A67 /* wait2a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437611E1CD1300383A67 /* wait2a.jpg */; };
 		FAA3491C11DDAECF00F995F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA3491B11DDAECF00F995F7 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		625A5CF6166B07E900F4CA32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6058900D05DD3D006BFB54;
+			remoteInfo = AMSample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,12 +245,26 @@
 		623EEB5E166A7DA500C63152 /* AMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSettings.h; sourceTree = "<group>"; };
 		623EEB5F166A7DA500C63152 /* AMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSettings.m; sourceTree = "<group>"; };
 		6251658E1516E42A004E9CC7 /* Border_frame_256w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Border_frame_256w.png; sourceTree = "<group>"; };
+		62528A09166ABD620098A836 /* AMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConstants.h; sourceTree = "<group>"; };
+		625A5CFA166B086200F4CA32 /* FiR3FiParseMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiParseMaster.h; sourceTree = "<group>"; };
+		625A5CFB166B086200F4CA32 /* FiR3FiParseMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiParseMaster.m; sourceTree = "<group>"; };
+		625A5CFD166B086200F4CA32 /* FiR3FiOBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiOBJCReturnTypes.h; sourceTree = "<group>"; };
+		625A5CFE166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiOBJCReturnTypes.m; sourceTree = "<group>"; };
+		625A5D0B166B1E3100F4CA32 /* AMCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AMCategories.h; path = Classes/Categories/AMCategories.h; sourceTree = SOURCE_ROOT; };
+		625A5D0D166B1F0B00F4CA32 /* SplashAppTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashAppTest.h; sourceTree = "<group>"; };
+		625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashAppTest.m; sourceTree = "<group>"; };
+		625A5D10166B1F0B00F4CA32 /* SplashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashTest.h; sourceTree = "<group>"; };
+		625A5D11166B1F0B00F4CA32 /* SplashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashTest.m; sourceTree = "<group>"; };
+		625A5D17166B1F6000F4CA32 /* AMWindowAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMWindowAdditions.h; sourceTree = "<group>"; };
+		625A5D18166B1F6000F4CA32 /* AMWindowAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMWindowAdditions.m; sourceTree = "<group>"; };
+		625A5D1C166B1F6600F4CA32 /* AMYAMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYAMLParser.h; sourceTree = "<group>"; };
+		625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYAMLParser.m; sourceTree = "<group>"; };
+		625A5D21166B1F8500F4CA32 /* AMSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSplashScreen.h; sourceTree = "<group>"; };
+		625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSplashScreen.m; sourceTree = "<group>"; };
 		628042EF1555F6C90087838D /* MyTestSet.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTestSet.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		628042F01555F6C90087838D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		628042F61555F6C90087838D /* MyTestSet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTestSet-Info.plist"; sourceTree = "<group>"; };
 		628042F81555F6C90087838D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		628042FA1555F6C90087838D /* MyTestSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTestSet.h; sourceTree = "<group>"; };
-		628042FB1555F6C90087838D /* MyTestSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestSet.m; sourceTree = "<group>"; };
 		628042FD1555F6C90087838D /* MyTestSet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTestSet-Prefix.pch"; sourceTree = "<group>"; };
 		62DE7AE0154B6BD000C0C96F /* SavedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedImage.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AMSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AMSample-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -267,6 +303,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				625A5CF9166B086200F4CA32 /* ParseMaster */,
+				62528A08166ABD620098A836 /* Constants */,
 				623EEB44166A7C7500C63152 /* Logging */,
 				623EEB26166A7C6A00C63152 /* Categories */,
 				2A66A36314D4A9BC0015AB3C /* Delegate */,
@@ -286,6 +324,7 @@
 				2AA56B0313CFAB950046D67E /* InfoPage */,
 				623EEB55166A7D9700C63152 /* AMObject */,
 				623EEB5A166A7DA500C63152 /* SettingsManager */,
+				625A5D20166B1F8500F4CA32 /* AMSplashScreen */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -546,6 +585,8 @@
 		623EEB26166A7C6A00C63152 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				625A5D0B166B1E3100F4CA32 /* AMCategories.h */,
+				625A5D16166B1F6000F4CA32 /* UIWindowAdditions */,
 				623EEB27166A7C6A00C63152 /* NSArray */,
 				623EEB2A166A7C6A00C63152 /* NSDictionary */,
 				623EEB2D166A7C6A00C63152 /* NSObject */,
@@ -569,6 +610,7 @@
 			children = (
 				623EEB2B166A7C6A00C63152 /* AMDictionaryAdditions.h */,
 				623EEB2C166A7C6A00C63152 /* AMDictionaryAdditions.m */,
+				625A5D1B166B1F6600F4CA32 /* YAMLParser */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -657,11 +699,83 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		62528A08166ABD620098A836 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				62528A09166ABD620098A836 /* AMConstants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		625A5CF9166B086200F4CA32 /* ParseMaster */ = {
+			isa = PBXGroup;
+			children = (
+				625A5CFA166B086200F4CA32 /* FiR3FiParseMaster.h */,
+				625A5CFB166B086200F4CA32 /* FiR3FiParseMaster.m */,
+				625A5CFC166B086200F4CA32 /* ReturnTypes */,
+			);
+			path = ParseMaster;
+			sourceTree = "<group>";
+		};
+		625A5CFC166B086200F4CA32 /* ReturnTypes */ = {
+			isa = PBXGroup;
+			children = (
+				625A5CFD166B086200F4CA32 /* FiR3FiOBJCReturnTypes.h */,
+				625A5CFE166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m */,
+			);
+			path = ReturnTypes;
+			sourceTree = "<group>";
+		};
+		625A5D0C166B1F0B00F4CA32 /* Application Tests */ = {
+			isa = PBXGroup;
+			children = (
+				625A5D0D166B1F0B00F4CA32 /* SplashAppTest.h */,
+				625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */,
+			);
+			path = "Application Tests";
+			sourceTree = "<group>";
+		};
+		625A5D0F166B1F0B00F4CA32 /* Logic Tests */ = {
+			isa = PBXGroup;
+			children = (
+				625A5D10166B1F0B00F4CA32 /* SplashTest.h */,
+				625A5D11166B1F0B00F4CA32 /* SplashTest.m */,
+			);
+			path = "Logic Tests";
+			sourceTree = "<group>";
+		};
+		625A5D16166B1F6000F4CA32 /* UIWindowAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				625A5D17166B1F6000F4CA32 /* AMWindowAdditions.h */,
+				625A5D18166B1F6000F4CA32 /* AMWindowAdditions.m */,
+			);
+			path = UIWindowAdditions;
+			sourceTree = "<group>";
+		};
+		625A5D1B166B1F6600F4CA32 /* YAMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				625A5D1C166B1F6600F4CA32 /* AMYAMLParser.h */,
+				625A5D1D166B1F6600F4CA32 /* AMYAMLParser.m */,
+			);
+			path = YAMLParser;
+			sourceTree = "<group>";
+		};
+		625A5D20166B1F8500F4CA32 /* AMSplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				625A5D21166B1F8500F4CA32 /* AMSplashScreen.h */,
+				625A5D22166B1F8500F4CA32 /* AMSplashScreen.m */,
+			);
+			path = AMSplashScreen;
+			sourceTree = "<group>";
+		};
 		628042F41555F6C90087838D /* MyTestSet */ = {
 			isa = PBXGroup;
 			children = (
-				628042FA1555F6C90087838D /* MyTestSet.h */,
-				628042FB1555F6C90087838D /* MyTestSet.m */,
+				625A5D0C166B1F0B00F4CA32 /* Application Tests */,
+				625A5D0F166B1F0B00F4CA32 /* Logic Tests */,
 				628042F51555F6C90087838D /* Supporting Files */,
 			);
 			path = MyTestSet;
@@ -709,6 +823,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				625A5CF7166B07E900F4CA32 /* PBXTargetDependency */,
 			);
 			name = MyTestSet;
 			productName = MyTestSet;
@@ -857,6 +972,12 @@
 				623EEB58166A7D9700C63152 /* AMObject.m in Sources */,
 				623EEB60166A7DA500C63152 /* AMSettingsManager.m in Sources */,
 				623EEB62166A7DA500C63152 /* AMSettings.m in Sources */,
+				625A5CFF166B086200F4CA32 /* FiR3FiParseMaster.m in Sources */,
+				625A5D01166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m in Sources */,
+				625A5D12166B1F0B00F4CA32 /* SplashAppTest.m in Sources */,
+				625A5D19166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */,
+				625A5D1E166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
+				625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,7 +985,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				628042FC1555F6C90087838D /* MyTestSet.m in Sources */,
 				623EEB39166A7C6A00C63152 /* AMArrayAdditions.m in Sources */,
 				623EEB3B166A7C6A00C63152 /* AMDictionaryAdditions.m in Sources */,
 				623EEB3D166A7C6A00C63152 /* NSObject+ClassName.m in Sources */,
@@ -875,10 +995,25 @@
 				623EEB59166A7D9700C63152 /* AMObject.m in Sources */,
 				623EEB61166A7DA500C63152 /* AMSettingsManager.m in Sources */,
 				623EEB63166A7DA500C63152 /* AMSettings.m in Sources */,
+				625A5D00166B086200F4CA32 /* FiR3FiParseMaster.m in Sources */,
+				625A5D02166B086200F4CA32 /* FiR3FiOBJCReturnTypes.m in Sources */,
+				625A5D13166B1F0B00F4CA32 /* SplashAppTest.m in Sources */,
+				625A5D15166B1F0B00F4CA32 /* SplashTest.m in Sources */,
+				625A5D1A166B1F6000F4CA32 /* AMWindowAdditions.m in Sources */,
+				625A5D1F166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
+				625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		625A5CF7166B07E900F4CA32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6058900D05DD3D006BFB54 /* AMSample */;
+			targetProxy = 625A5CF6166B07E900F4CA32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		628042F71555F6C90087838D /* InfoPlist.strings */ = {
@@ -896,18 +1031,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Robert Twaalfhoven (4N6P522BP4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Robert Twaalfhoven (4N6P522BP4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AMSample_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"APP_TESTS=1",
+					DEBUG,
+				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = AMSample;
-				PROVISIONING_PROFILE = "ECA6A3A3-2F4E-401D-97F0-834FC6EBC5D1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECA6A3A3-2F4E-401D-97F0-834FC6EBC5D1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = "iphoneos 5.0";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -918,15 +1057,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Robert Twaalfhoven (4N6P522BP4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AMSample_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = AMSample;
-				PROVISIONING_PROFILE = "ECA6A3A3-2F4E-401D-97F0-834FC6EBC5D1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = "iphoneos 5.0";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = 2;

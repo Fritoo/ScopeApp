@@ -6,9 +6,13 @@
 //  Copyright (c) 2012 Milk Drinking Cow. All rights reserved.
 //
 
-#import "MyTestSet.h"
+#import "SplashTest.h"
+#import "AMWindowAdditions.h"
+#import "AMLogging.h"
 
-@implementation MyTestSet
+#define COLOR LIGHT_BLUE
+
+@implementation SplashTest
 
 - (void)setUp
 {
@@ -24,9 +28,5 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in MyTestSet");
-}
 
 @end

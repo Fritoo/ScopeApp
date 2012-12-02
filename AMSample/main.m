@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SplashAppTest.h"
 
 int main(int argc, char *argv[]) {
+    
+#if (defined(DEBUG) && APP_TESTS)
+    [SplashAppTest executeApplicationTests];
+#endif
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     int retVal = UIApplicationMain(argc, argv, nil, nil);

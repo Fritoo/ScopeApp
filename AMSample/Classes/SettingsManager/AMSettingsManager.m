@@ -8,9 +8,23 @@
 
 #import "AMSettingsManager.h"
 
-static NSString *isUnlocked = nil;
-
 @implementation AMSettingsManager
+
++ (AMSettingsManager *)settingsManager
+{
+    static dispatch_once_t once;
+    static AMSettingsManager *settingsManager;
+    dispatch_once(&once, ^ { settingsManager = [[AMSettingsManager alloc] init]; });
+    return settingsManager;
+}
+
+
+- (void)applicationIsActive {
+    
+    
+    
+}
+
 
 
 

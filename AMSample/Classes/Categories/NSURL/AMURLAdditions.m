@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSURL+NSURLAdditions.h"
+#import "AMURLAdditions.h"
 #import "AMStringContains.h"
 #import "AMLogging.h"
 #import "AMArrayAdditions.h"

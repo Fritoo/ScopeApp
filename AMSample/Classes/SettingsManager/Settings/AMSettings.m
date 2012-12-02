@@ -10,6 +10,17 @@
 
 #define COLOR CANTALOUPE
 
+static BOOL *locked = NO;
+
 @implementation AMSettings
+
+
+- (void)loadDefaults {
+    
+    self.lastOpenedAlbum = kAM_NotFound;
+    self.saveToPhotoRoll = YES;
+    
+}
+
 
 @end

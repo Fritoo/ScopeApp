@@ -10,4 +10,9 @@
 
 @interface AMSettings : AMObject
 
+@property BOOL saveToPhotoRoll;
+@property (strong) NSString *lastOpenedAlbum;
+
+- (void)loadDefaults;
+
 @end
