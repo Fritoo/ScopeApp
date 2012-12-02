@@ -13,9 +13,12 @@
 @interface AMSplashScreen : UIView {
     
     NSTimer *timer;
+    float rotation;
+    float depth;
 }
 
-
 + (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm;
+- (void)animateConcurrently;
+- (void)startAnimation;
 
 @end

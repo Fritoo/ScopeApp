@@ -11,5 +11,6 @@
 
 
 #define kAM_NotFound @"none"
+#define kAM_ViewMovedToSuperview @"kAM_ViewMovedToSuperview"
 
 #endif

@@ -16,6 +16,6 @@
 #import "NSString+MD5Addition.h"
 #import "NSObject+ClassName.h"
 #import "AMWindowAdditions.h"
-
+#import "AMLayerAdditions.h"
 
 #endif

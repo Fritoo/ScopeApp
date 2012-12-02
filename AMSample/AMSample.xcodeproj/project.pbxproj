@@ -117,6 +117,9 @@
 		628042F31555F6C90087838D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		628042F91555F6C90087838D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 628042F71555F6C90087838D /* InfoPlist.strings */; };
 		62DE7AE1154B6BD000C0C96F /* SavedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE7AE0154B6BD000C0C96F /* SavedImage.png */; };
+		62E10BEE166BE21E00D45FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E10BED166BE21E00D45FEB /* QuartzCore.framework */; };
+		62E10BF7166C188200D45FEB /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E10BF6166C188200D45FEB /* AMLayerAdditions.m */; };
+		62E10BF8166C188200D45FEB /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E10BF6166C188200D45FEB /* AMLayerAdditions.m */; };
 		FA65437711E1CD1300383A67 /* wait1a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437511E1CD1300383A67 /* wait1a.jpg */; };
 		FA65437811E1CD1300383A67 /* wait2a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437611E1CD1300383A67 /* wait2a.jpg */; };
 		FAA3491C11DDAECF00F995F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA3491B11DDAECF00F995F7 /* AudioToolbox.framework */; };
@@ -271,6 +274,9 @@
 		628042F81555F6C90087838D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		628042FD1555F6C90087838D /* MyTestSet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTestSet-Prefix.pch"; sourceTree = "<group>"; };
 		62DE7AE0154B6BD000C0C96F /* SavedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedImage.png; sourceTree = "<group>"; };
+		62E10BED166BE21E00D45FEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		62E10BF5166C188200D45FEB /* AMLayerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLayerAdditions.h; sourceTree = "<group>"; };
+		62E10BF6166C188200D45FEB /* AMLayerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLayerAdditions.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AMSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AMSample-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		FA65437511E1CD1300383A67 /* wait1a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wait1a.jpg; sourceTree = "<group>"; };
 		FA65437611E1CD1300383A67 /* wait2a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wait2a.jpg; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E10BEE166BE21E00D45FEB /* QuartzCore.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -345,6 +352,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				62E10BED166BE21E00D45FEB /* QuartzCore.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -590,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				625A5D0B166B1E3100F4CA32 /* AMCategories.h */,
+				62E10BF4166C188200D45FEB /* CALayer */,
 				625A5D16166B1F6000F4CA32 /* UIWindowAdditions */,
 				623EEB27166A7C6A00C63152 /* NSArray */,
 				623EEB2A166A7C6A00C63152 /* NSDictionary */,
@@ -797,6 +806,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		62E10BF4166C188200D45FEB /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				62E10BF5166C188200D45FEB /* AMLayerAdditions.h */,
+				62E10BF6166C188200D45FEB /* AMLayerAdditions.m */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,6 +1003,7 @@
 				625A5D1E166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
 				625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 				625A5D27166B22B500F4CA32 /* AMAppTests.m in Sources */,
+				62E10BF7166C188200D45FEB /* AMLayerAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1029,7 @@
 				625A5D1F166B1F6600F4CA32 /* AMYAMLParser.m in Sources */,
 				625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 				625A5D28166B22B500F4CA32 /* AMAppTests.m in Sources */,
+				62E10BF8166C188200D45FEB /* AMLayerAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

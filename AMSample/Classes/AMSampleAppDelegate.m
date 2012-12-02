@@ -42,8 +42,16 @@
     
     [window makeKeyAndVisible];
 	
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotification:) name:nil object:nil];
+    
 	return YES;
 }
+
+-(void)onNotification:(NSNotification*)notification
+{
+    NSLog(@"Notification name is %@ sent by %@",[notification name], [[notification object] description] );
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
