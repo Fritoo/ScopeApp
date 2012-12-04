@@ -116,6 +116,8 @@
 		628042F21555F6C90087838D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		628042F31555F6C90087838D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		628042F91555F6C90087838D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 628042F71555F6C90087838D /* InfoPlist.strings */; };
+		62A707EF166DAB3500FDB375 /* AMLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A707EE166DAB3500FDB375 /* AMLauncher.m */; };
+		62A707F0166DAB3500FDB375 /* AMLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A707EE166DAB3500FDB375 /* AMLauncher.m */; };
 		62DE7AE1154B6BD000C0C96F /* SavedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE7AE0154B6BD000C0C96F /* SavedImage.png */; };
 		62E10BEE166BE21E00D45FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E10BED166BE21E00D45FEB /* QuartzCore.framework */; };
 		62E10BF7166C188200D45FEB /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E10BF6166C188200D45FEB /* AMLayerAdditions.m */; };
@@ -273,6 +275,8 @@
 		628042F61555F6C90087838D /* MyTestSet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTestSet-Info.plist"; sourceTree = "<group>"; };
 		628042F81555F6C90087838D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		628042FD1555F6C90087838D /* MyTestSet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTestSet-Prefix.pch"; sourceTree = "<group>"; };
+		62A707ED166DAB3500FDB375 /* AMLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMLauncher.h; path = Launch/AMLauncher.h; sourceTree = "<group>"; };
+		62A707EE166DAB3500FDB375 /* AMLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMLauncher.m; path = Launch/AMLauncher.m; sourceTree = "<group>"; };
 		62DE7AE0154B6BD000C0C96F /* SavedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedImage.png; sourceTree = "<group>"; };
 		62E10BED166BE21E00D45FEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62E10BF5166C188200D45FEB /* AMLayerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLayerAdditions.h; sourceTree = "<group>"; };
@@ -352,7 +356,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				62E10BED166BE21E00D45FEB /* QuartzCore.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -391,6 +394,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62E10BED166BE21E00D45FEB /* QuartzCore.framework */,
 				2A61FE5F14EA39270065D0C0 /* AssetsLibrary.framework */,
 				2A7E99A013D4DAC90032409D /* MessageUI.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -449,6 +453,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* AMSampleAppDelegate.h */,
 				1D3623250D0F684500981E51 /* AMSampleAppDelegate.m */,
+				62A707ED166DAB3500FDB375 /* AMLauncher.h */,
+				62A707EE166DAB3500FDB375 /* AMLauncher.m */,
 				2A66A39214D4B6B30015AB3C /* MyViewCon.h */,
 				2A66A39314D4B6B30015AB3C /* MyViewCon.m */,
 				2A66A36714D4AC0E0015AB3C /* MainWindow.xib */,
@@ -1004,6 +1010,7 @@
 				625A5D23166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 				625A5D27166B22B500F4CA32 /* AMAppTests.m in Sources */,
 				62E10BF7166C188200D45FEB /* AMLayerAdditions.m in Sources */,
+				62A707EF166DAB3500FDB375 /* AMLauncher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1037,7 @@
 				625A5D24166B1F8500F4CA32 /* AMSplashScreen.m in Sources */,
 				625A5D28166B22B500F4CA32 /* AMAppTests.m in Sources */,
 				62E10BF8166C188200D45FEB /* AMLayerAdditions.m in Sources */,
+				62A707F0166DAB3500FDB375 /* AMLauncher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

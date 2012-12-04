@@ -15,12 +15,23 @@ static BOOL *locked = NO;
 @implementation AMSettings
 
 
+- (id)init {
+    if ( self = [super init] ) {
+        [self loadDefaults];
+    }
+    
+    return self;
+}
+
+
 - (void)loadDefaults {
     
     self.lastOpenedAlbum = kAM_NotFound;
     self.saveToPhotoRoll = YES;
     
 }
+
+
 
 
 @end

@@ -19,6 +19,14 @@
 }
 
 
+- (id)init {
+    
+    if ( self = [super init] ) {
+        self.settings = [[AMSettings alloc] init];
+        
+    }
+}
+
 - (void)applicationIsActive {
     
     
