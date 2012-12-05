@@ -122,6 +122,16 @@
 		62E10BEE166BE21E00D45FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E10BED166BE21E00D45FEB /* QuartzCore.framework */; };
 		62E10BF7166C188200D45FEB /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E10BF6166C188200D45FEB /* AMLayerAdditions.m */; };
 		62E10BF8166C188200D45FEB /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E10BF6166C188200D45FEB /* AMLayerAdditions.m */; };
+		62E27C07166FBE060066B96C /* AMImageView.id0 in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C01166FBE060066B96C /* AMImageView.id0 */; };
+		62E27C08166FBE060066B96C /* AMImageView.id0 in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C01166FBE060066B96C /* AMImageView.id0 */; };
+		62E27C09166FBE060066B96C /* AMImageView.id1 in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C02166FBE060066B96C /* AMImageView.id1 */; };
+		62E27C0A166FBE060066B96C /* AMImageView.id1 in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C02166FBE060066B96C /* AMImageView.id1 */; };
+		62E27C0B166FBE060066B96C /* AMImageView.nam in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C03166FBE060066B96C /* AMImageView.nam */; };
+		62E27C0C166FBE060066B96C /* AMImageView.nam in Resources */ = {isa = PBXBuildFile; fileRef = 62E27C03166FBE060066B96C /* AMImageView.nam */; };
+		62E27C0D166FBE060066B96C /* libAirMicro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E27C04166FBE060066B96C /* libAirMicro.a */; };
+		62E27C0E166FBE060066B96C /* libAirMicro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E27C04166FBE060066B96C /* libAirMicro.a */; };
+		62E27C0F166FBE060066B96C /* libAirMicro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E27C06166FBE060066B96C /* libAirMicro.a */; };
+		62E27C10166FBE060066B96C /* libAirMicro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E27C06166FBE060066B96C /* libAirMicro.a */; };
 		FA65437711E1CD1300383A67 /* wait1a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437511E1CD1300383A67 /* wait1a.jpg */; };
 		FA65437811E1CD1300383A67 /* wait2a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA65437611E1CD1300383A67 /* wait2a.jpg */; };
 		FAA3491C11DDAECF00F995F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA3491B11DDAECF00F995F7 /* AudioToolbox.framework */; };
@@ -177,7 +187,6 @@
 		2A7E998713D4D8240032409D /* Go_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_button.png; sourceTree = "<group>"; };
 		2A7E998813D4D8240032409D /* arrow_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_back.png; sourceTree = "<group>"; };
 		2A7E99A013D4DAC90032409D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		2A91113A13C7C9D6002E054C /* libAirMicro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libAirMicro.h; path = Classes/libAirMicro.h; sourceTree = "<group>"; };
 		2A96988113D4ABB800EC3BB0 /* backButton_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton_up.png; path = Classes/backButton_up.png; sourceTree = "<group>"; };
 		2A96988213D4ABB800EC3BB0 /* backButton_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton_down.png; path = Classes/backButton_down.png; sourceTree = "<group>"; };
 		2A96988313D4ABB800EC3BB0 /* liveButton_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = liveButton_down.png; path = Classes/liveButton_down.png; sourceTree = "<group>"; };
@@ -281,6 +290,12 @@
 		62E10BED166BE21E00D45FEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62E10BF5166C188200D45FEB /* AMLayerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLayerAdditions.h; sourceTree = "<group>"; };
 		62E10BF6166C188200D45FEB /* AMLayerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLayerAdditions.m; sourceTree = "<group>"; };
+		62E27BFF166FBE060066B96C /* libAirMicro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libAirMicro.h; sourceTree = "<group>"; };
+		62E27C01166FBE060066B96C /* AMImageView.id0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AMImageView.id0; sourceTree = "<group>"; };
+		62E27C02166FBE060066B96C /* AMImageView.id1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AMImageView.id1; sourceTree = "<group>"; };
+		62E27C03166FBE060066B96C /* AMImageView.nam */ = {isa = PBXFileReference; lastKnownFileType = file; path = AMImageView.nam; sourceTree = "<group>"; };
+		62E27C04166FBE060066B96C /* libAirMicro.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAirMicro.a; sourceTree = "<group>"; };
+		62E27C06166FBE060066B96C /* libAirMicro.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAirMicro.a; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AMSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AMSample-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		FA65437511E1CD1300383A67 /* wait1a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wait1a.jpg; sourceTree = "<group>"; };
 		FA65437611E1CD1300383A67 /* wait2a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wait2a.jpg; sourceTree = "<group>"; };
@@ -299,6 +314,8 @@
 				FAA3491C11DDAECF00F995F7 /* AudioToolbox.framework in Frameworks */,
 				2A7E99A113D4DAC90032409D /* MessageUI.framework in Frameworks */,
 				2A61FE6014EA39270065D0C0 /* AssetsLibrary.framework in Frameworks */,
+				62E27C0D166FBE060066B96C /* libAirMicro.a in Frameworks */,
+				62E27C0F166FBE060066B96C /* libAirMicro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +326,8 @@
 				628042F11555F6C90087838D /* SenTestingKit.framework in Frameworks */,
 				628042F21555F6C90087838D /* UIKit.framework in Frameworks */,
 				628042F31555F6C90087838D /* Foundation.framework in Frameworks */,
+				62E27C0E166FBE060066B96C /* libAirMicro.a in Frameworks */,
+				62E27C10166FBE060066B96C /* libAirMicro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +388,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2A91113A13C7C9D6002E054C /* libAirMicro.h */,
 				32CA4F630368D1EE00C91783 /* AMSample_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -394,6 +412,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62E27BFE166FBE060066B96C /* libAirMicro */,
 				62E10BED166BE21E00D45FEB /* QuartzCore.framework */,
 				2A61FE5F14EA39270065D0C0 /* AssetsLibrary.framework */,
 				2A7E99A013D4DAC90032409D /* MessageUI.framework */,
@@ -821,6 +840,36 @@
 			path = CALayer;
 			sourceTree = "<group>";
 		};
+		62E27BFE166FBE060066B96C /* libAirMicro */ = {
+			isa = PBXGroup;
+			children = (
+				62E27BFF166FBE060066B96C /* libAirMicro.h */,
+				62E27C00166FBE060066B96C /* Release-iphoneos */,
+				62E27C05166FBE060066B96C /* Release-iphonesimulator */,
+			);
+			name = libAirMicro;
+			path = ../../libAirMicro;
+			sourceTree = "<group>";
+		};
+		62E27C00166FBE060066B96C /* Release-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				62E27C01166FBE060066B96C /* AMImageView.id0 */,
+				62E27C02166FBE060066B96C /* AMImageView.id1 */,
+				62E27C03166FBE060066B96C /* AMImageView.nam */,
+				62E27C04166FBE060066B96C /* libAirMicro.a */,
+			);
+			path = "Release-iphoneos";
+			sourceTree = "<group>";
+		};
+		62E27C05166FBE060066B96C /* Release-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				62E27C06166FBE060066B96C /* libAirMicro.a */,
+			);
+			path = "Release-iphonesimulator";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -939,6 +988,9 @@
 				6251658F1516E42A004E9CC7 /* Border_frame_256w.png in Resources */,
 				2AED3A82153F746B009E9177 /* FullScreenButton_plusBackground_cropped_BlueGray.png in Resources */,
 				62DE7AE1154B6BD000C0C96F /* SavedImage.png in Resources */,
+				62E27C07166FBE060066B96C /* AMImageView.id0 in Resources */,
+				62E27C09166FBE060066B96C /* AMImageView.id1 in Resources */,
+				62E27C0B166FBE060066B96C /* AMImageView.nam in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,6 +999,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				628042F91555F6C90087838D /* InfoPlist.strings in Resources */,
+				62E27C08166FBE060066B96C /* AMImageView.id0 in Resources */,
+				62E27C0A166FBE060066B96C /* AMImageView.id1 in Resources */,
+				62E27C0C166FBE060066B96C /* AMImageView.nam in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,6 +1136,11 @@
 				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphonesimulator\"",
+				);
 				PRODUCT_NAME = AMSample;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1105,6 +1165,11 @@
 				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphonesimulator\"",
+				);
 				PRODUCT_NAME = AMSample;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = "iphoneos 5.0";
@@ -1138,6 +1203,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "MyTestSet/MyTestSet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphonesimulator\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
@@ -1161,6 +1231,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "MyTestSet/MyTestSet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",
+					"\"$(SRCROOT)/../../libAirMicro/Release-iphonesimulator\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
