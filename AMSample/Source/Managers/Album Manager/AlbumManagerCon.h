@@ -17,8 +17,6 @@
 @property (retain) id mainViewCon;
 
 - (void)makeAlbumNamed: (NSString *)albumName;
-- (NSString *)mainGalleryPath;
-- (NSString *)documentsDirectoryPath;
 - (void)updateTableContent;
 
 @end

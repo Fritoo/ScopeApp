@@ -7,6 +7,7 @@
 //
 
 #import "AMFileManager.h"
+#import "NSObject+ClassName.h"
 
 @implementation AMFileManager
 
@@ -48,11 +49,39 @@ static AMFileManager *fileManager;
     return self;
 }
 
++ (int)checkAndBuildPath:(NSString *)path {
+    
+    if ( ![[NSFileManager defaultManager] fileExistsAtPath:path] ) {
+        NSError *err;
+        BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                                 withIntermediateDirectories:YES
+                                                                  attributes:nil
+                                                                       error:&err];
+        return success;
+        
+    }
+    
+    return 0;
+}
+
++ (NSArray *)contentsAtPath:(NSString *)path {
+    NSError *err;
+    return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&err];
+}
+
++ (NSString *)pathForNewAlbum:(NSString *)newAlbumName {
+    return [[AMFileManager pathForMainGallery] stringByAppendingPathComponent:newAlbumName];
+}
+
++ (NSString *)pathForDefaultGallery {
+    return [[AMFileManager pathForMainGallery] stringByAppendingPathComponent:DEFAULT_ALBUM];
+}
+
 
 + (NSString *)pathForMainGallery {
-    if (  )
     return [[AMFileManager documentsDir] stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
 }
+
 + (NSString *)documentsDir {
     // eg: ...$thisiPhone/thisAppsHash/Documents
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];

@@ -6,12 +6,18 @@
 //
 //
 
-#import "AMObject.h"
 
-@interface AMFileManager : AMObject
+
+@interface AMFileManager : NSObject
 
 
 + (AMFileManager *)fileManager;
++ (int)checkAndBuildPath:(NSString *)path;
++ (NSArray *)contentsAtPath:(NSString *)path;
+
++ (NSString *)pathForNewAlbum:(NSString *)newAlbumName;
++ (NSString *)pathForMainGallery;
++ (NSString *)pathForDefaultGallery;
 + (NSString *)documentsDir;
 + (NSString *)cachesDir;
 

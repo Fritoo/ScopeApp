@@ -6,12 +6,12 @@
 //
 //
 
-#import "AMObject.h"
 
-@interface AMSettings : AMObject
+
+@interface AMSettings : NSObject
 
 @property BOOL saveToPhotoRoll;
-@property (strong) NSString *lastOpenedAlbum;
+@property (strong) NSString *lastOpenAlbum;
 
 - (void)loadDefaults;
 

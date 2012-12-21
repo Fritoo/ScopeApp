@@ -6,8 +6,8 @@
 //
 //
 
-#import "AMObject.h"
 
-@interface AMLauncher : AMObject
+
+@interface AMLauncher : NSObject
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AMSettings.h"
+#import "NSObject+ClassName.h"
 
 #define COLOR CANTALOUPE
 
@@ -26,7 +27,7 @@ static BOOL *locked = NO;
 
 - (void)loadDefaults {
     
-    self.lastOpenedAlbum = kAM_NotFound;
+    self.lastOpenAlbum = kAM_NotFound;
     self.saveToPhotoRoll = YES;
     
 }

@@ -6,10 +6,10 @@
 //
 //
 
-#import "AMObject.h"
+
 #import "SplashAppTest.h"
 
-@interface AMAppTests : AMObject {
+@interface AMAppTests : NSObject {
     
 }
 

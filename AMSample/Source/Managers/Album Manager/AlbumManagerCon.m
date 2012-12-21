@@ -9,6 +9,9 @@
 #import "AlbumManagerCon.h"
 #import "CompareViewAppDelegate.h"
 #import "GalleryViewCon.h"
+#import "NSObject+ClassName.h"
+
+#define COLOR MOSS
 
 @implementation AlbumManagerCon
 
@@ -16,76 +19,38 @@
 
 - (void)viewDidLoad {
     
-    
-    //Get default file path for gallery
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-    NSError *error = nil;
     contentItems = [[NSMutableArray alloc] initWithObjects:@"Add New Album...", nil];
-    [contentItems addObjectsFromArray:[fileManager contentsOfDirectoryAtPath:MAIN_GALLERY_FOLDER_NAME error:&error]];
+
+    NSString *fullPath = [AMFileManager pathForMainGallery];
+    [AMFileManager checkAndBuildPath:fullPath];
+    [AMFileManager checkAndBuildPath:[AMFileManager pathForDefaultGallery]];
+    [contentItems addObjectsFromArray:[AMFileManager contentsAtPath:fullPath]];
     
-    if ( contentItems.count < 2 ) {
-        
-        [fileManager createDirectoryAtPath:fullPath withIntermediateDirectories:NO attributes:nil error:&error];
-        fullPath = [fullPath stringByAppendingPathComponent:DEFAULT_ALBUM];
-        
-        [fileManager createDirectoryAtPath:fullPath withIntermediateDirectories:NO attributes:nil error: &error];
-        
-        fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
-        NSArray *temp = [fileManager contentsOfDirectoryAtPath:fullPath error:&error];
-        [contentItems addObjectsFromArray: temp ];
-        
-        
-    }
-    
-    
-    NSLog(@"\n\n***\n%@\n***\n\n", contentItems);
+    Log(@"%@", contentItems);
 }   
 
 
 
 - (void)makeAlbumNamed: (NSString *)albumName {
     
-    if ( !albumName ) return;
+    if ( !albumName ) {
+        Log(@"**ERROR** No album name specified.");
+        return;
+    }
     
     //Get default file path for gallery
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
-    fullPath = [fullPath stringByAppendingPathComponent:albumName];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSError *error = nil;
-    [fileManager createDirectoryAtPath:fullPath withIntermediateDirectories:NO attributes:nil error:&error];
-    
+    [AMFileManager checkAndBuildPath:[AMFileManager pathForNewAlbum:albumName]];
     [self updateTableContent];
     
 }
 
 - (void)updateTableContent {
     
-    NSError *error;
+    // Purge and reload
     [contentItems removeAllObjects];
     [contentItems addObject:@"Add New Album..."];
-    [contentItems addObjectsFromArray: [NSMutableArray arrayWithArray: [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self mainGalleryPath] error:&error]]];
+    [contentItems addObjectsFromArray: [AMFileManager contentsAtPath:[AMFileManager pathForMainGallery]]];
     [self.tableView reloadData];
-}
-
-- (NSString *)documentsDirectoryPath {
-    //Get default file path for gallery
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = paths[0];
-    
-    return documentsDirectory;
-}
-
-- (NSString *)mainGalleryPath {
-    return [[self documentsDirectoryPath] stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
 }
 
 
@@ -123,7 +88,6 @@
 
     return cell;
 
-    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

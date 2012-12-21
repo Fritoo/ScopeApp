@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AMObject.h"
 
-@interface AMViewManager : AMObject {
+
+@interface AMViewManager : NSObject {
     
     float alphaA;
     float alphaB;

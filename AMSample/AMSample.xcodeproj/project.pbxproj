@@ -203,8 +203,10 @@
 		628042F31555F6C90087838D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		628042F91555F6C90087838D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 628042F71555F6C90087838D /* InfoPlist.strings */; };
 		62E10BEE166BE21E00D45FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E10BED166BE21E00D45FEB /* QuartzCore.framework */; };
-		62FCBC851683E0C9008CA14F /* AMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBBFE1683E0C9008CA14F /* AMObject.m */; };
-		62FCBC861683E0C9008CA14F /* AMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBBFE1683E0C9008CA14F /* AMObject.m */; };
+		62E2D1CD16842C1B0015E347 /* AMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1CC16842C1B0015E347 /* AMFileManager.m */; };
+		62E2D1CE16842C1B0015E347 /* AMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1CC16842C1B0015E347 /* AMFileManager.m */; };
+		62E2D1D6168437F70015E347 /* AMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1D5168437F70015E347 /* AMAlbum.m */; };
+		62E2D1D7168437F70015E347 /* AMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1D5168437F70015E347 /* AMAlbum.m */; };
 		62FCBC871683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */; };
 		62FCBC881683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */; };
 		62FCBC891683E0C9008CA14F /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC061683E0C9008CA14F /* AMLayerAdditions.m */; };
@@ -307,8 +309,6 @@
 		62FCBCF51683E1FA008CA14F /* FiR3FiParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBCF01683E1FA008CA14F /* FiR3FiParseMaster.m */; };
 		62FCBCF61683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBCF31683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m */; };
 		62FCBCF71683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBCF31683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m */; };
-		62FCBCFA1683E2E1008CA14F /* AMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBCF91683E2E1008CA14F /* AMFileManager.m */; };
-		62FCBCFB1683E2E1008CA14F /* AMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBCF91683E2E1008CA14F /* AMFileManager.m */; };
 		FAA3491C11DDAECF00F995F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA3491B11DDAECF00F995F7 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -434,8 +434,10 @@
 		628042F81555F6C90087838D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		628042FD1555F6C90087838D /* MyTestSet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTestSet-Prefix.pch"; sourceTree = "<group>"; };
 		62E10BED166BE21E00D45FEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		62FCBBFD1683E0C9008CA14F /* AMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMObject.h; sourceTree = "<group>"; };
-		62FCBBFE1683E0C9008CA14F /* AMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMObject.m; sourceTree = "<group>"; };
+		62E2D1CB16842C1B0015E347 /* AMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFileManager.h; sourceTree = "<group>"; };
+		62E2D1CC16842C1B0015E347 /* AMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFileManager.m; sourceTree = "<group>"; };
+		62E2D1D4168437F70015E347 /* AMAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAlbum.h; sourceTree = "<group>"; };
+		62E2D1D5168437F70015E347 /* AMAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAlbum.m; sourceTree = "<group>"; };
 		62FCBC001683E0C9008CA14F /* CompareViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareViewAppDelegate.h; sourceTree = "<group>"; };
 		62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareViewAppDelegate.m; sourceTree = "<group>"; };
 		62FCBC031683E0C9008CA14F /* AMCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCategories.h; sourceTree = "<group>"; };
@@ -528,8 +530,6 @@
 		62FCBCF01683E1FA008CA14F /* FiR3FiParseMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiParseMaster.m; sourceTree = "<group>"; };
 		62FCBCF21683E1FA008CA14F /* FiR3FiOBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiOBJCReturnTypes.h; sourceTree = "<group>"; };
 		62FCBCF31683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiOBJCReturnTypes.m; sourceTree = "<group>"; };
-		62FCBCF81683E2E1008CA14F /* AMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMFileManager.h; path = Source/Tools/AMFileManager/AMFileManager.h; sourceTree = SOURCE_ROOT; };
-		62FCBCF91683E2E1008CA14F /* AMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMFileManager.m; path = Source/Tools/AMFileManager/AMFileManager.m; sourceTree = SOURCE_ROOT; };
 		FAA3491B11DDAECF00F995F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -796,10 +796,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		62E2D1CA16842C1B0015E347 /* AMFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				62E2D1CB16842C1B0015E347 /* AMFileManager.h */,
+				62E2D1CC16842C1B0015E347 /* AMFileManager.m */,
+			);
+			path = AMFileManager;
+			sourceTree = "<group>";
+		};
+		62E2D1D3168437F70015E347 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				62E2D1D4168437F70015E347 /* AMAlbum.h */,
+				62E2D1D5168437F70015E347 /* AMAlbum.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
 		62FCBBFB1683E0C9008CA14F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				62FCBBFC1683E0C9008CA14F /* AMObject */,
 				62FCBBFF1683E0C9008CA14F /* App Delegate */,
 				62FCBC021683E0C9008CA14F /* Categories */,
 				62FCBC1E1683E0C9008CA14F /* Constants */,
@@ -821,15 +838,6 @@
 				62FCBC761683E0C9008CA14F /* Views */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		62FCBBFC1683E0C9008CA14F /* AMObject */ = {
-			isa = PBXGroup;
-			children = (
-				62FCBBFD1683E0C9008CA14F /* AMObject.h */,
-				62FCBBFE1683E0C9008CA14F /* AMObject.m */,
-			);
-			path = AMObject;
 			sourceTree = "<group>";
 		};
 		62FCBBFF1683E0C9008CA14F /* App Delegate */ = {
@@ -1029,6 +1037,7 @@
 			children = (
 				62FCBC3E1683E0C9008CA14F /* AlbumManagerCon.h */,
 				62FCBC3F1683E0C9008CA14F /* AlbumManagerCon.m */,
+				62E2D1D3168437F70015E347 /* Album */,
 			);
 			path = "Album Manager";
 			sourceTree = "<group>";
@@ -1217,6 +1226,7 @@
 		62FCBCED1683E1FA008CA14F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				62E2D1CA16842C1B0015E347 /* AMFileManager */,
 				62FCBCEE1683E1FA008CA14F /* ParseMaster */,
 			);
 			path = Tools;
@@ -1228,8 +1238,6 @@
 				62FCBCEF1683E1FA008CA14F /* FiR3FiParseMaster.h */,
 				62FCBCF01683E1FA008CA14F /* FiR3FiParseMaster.m */,
 				62FCBCF11683E1FA008CA14F /* ReturnTypes */,
-				62FCBCF81683E2E1008CA14F /* AMFileManager.h */,
-				62FCBCF91683E2E1008CA14F /* AMFileManager.m */,
 			);
 			path = ParseMaster;
 			sourceTree = "<group>";
@@ -1557,7 +1565,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				625A5D12166B1F0B00F4CA32 /* SplashAppTest.m in Sources */,
 				625A5D27166B22B500F4CA32 /* AMAppTests.m in Sources */,
-				62FCBC851683E0C9008CA14F /* AMObject.m in Sources */,
 				62FCBC871683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */,
 				62FCBC891683E0C9008CA14F /* AMLayerAdditions.m in Sources */,
 				62FCBC8B1683E0C9008CA14F /* AMArrayAdditions.m in Sources */,
@@ -1594,7 +1601,8 @@
 				62FCBCEB1683E0C9008CA14F /* TogglingScrollview.m in Sources */,
 				62FCBCF41683E1FA008CA14F /* FiR3FiParseMaster.m in Sources */,
 				62FCBCF61683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */,
-				62FCBCFA1683E2E1008CA14F /* AMFileManager.m in Sources */,
+				62E2D1CD16842C1B0015E347 /* AMFileManager.m in Sources */,
+				62E2D1D6168437F70015E347 /* AMAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,7 +1613,6 @@
 				625A5D13166B1F0B00F4CA32 /* SplashAppTest.m in Sources */,
 				625A5D15166B1F0B00F4CA32 /* SplashTest.m in Sources */,
 				625A5D28166B22B500F4CA32 /* AMAppTests.m in Sources */,
-				62FCBC861683E0C9008CA14F /* AMObject.m in Sources */,
 				62FCBC881683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */,
 				62FCBC8A1683E0C9008CA14F /* AMLayerAdditions.m in Sources */,
 				62FCBC8C1683E0C9008CA14F /* AMArrayAdditions.m in Sources */,
@@ -1642,7 +1649,8 @@
 				62FCBCEC1683E0C9008CA14F /* TogglingScrollview.m in Sources */,
 				62FCBCF51683E1FA008CA14F /* FiR3FiParseMaster.m in Sources */,
 				62FCBCF71683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */,
-				62FCBCFB1683E2E1008CA14F /* AMFileManager.m in Sources */,
+				62E2D1CE16842C1B0015E347 /* AMFileManager.m in Sources */,
+				62E2D1D7168437F70015E347 /* AMAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

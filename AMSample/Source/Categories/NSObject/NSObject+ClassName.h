@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMLogging.h"
+#import "AMConstants.h"
+#import "AMCategories.h"
+#import "EnumHeader.h"
+#import "AMFileManager.h"
 
 @interface NSObject (ClassName)
 

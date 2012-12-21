@@ -6,11 +6,11 @@
 //
 //
 
-#import "AMObject.h"
+
 #import "AMSplashScreen.h"
 
 
-@interface SplashAppTest : AMObject {
+@interface SplashAppTest : NSObject {
 
     AMSplashScreen *splash;
 

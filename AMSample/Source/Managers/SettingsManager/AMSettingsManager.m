@@ -7,6 +7,7 @@
 //
 
 #import "AMSettingsManager.h"
+#import "NSObject+ClassName.h"
 
 @implementation AMSettingsManager
 
@@ -47,6 +48,26 @@ static AMSettingsManager *settingsManager;
     return self;
 }
 
+
+- (int)shouldSaveToPhotoRoll {
+    return self.settings.saveToPhotoRoll;
+}
+- (void)setShouldSaveToPhotoRoll:(BOOL)shouldSave {
+    self.settings.saveToPhotoRoll = shouldSave;
+}
+
+- (id)lastOpenAlbum {
+    return self.settings.lastOpenAlbum;
+}
+
+- (void)setLastOpenAlbum:(id)album {
+    if ( nil == album ) {
+        Log(@"Album is nil. Not setting lastOpenAlbum.");
+        return;
+    }
+    
+    self.settings.lastOpenAlbum = album;
+}
 
 - (void)applicationIsActive {
     
