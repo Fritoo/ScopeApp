@@ -16,6 +16,7 @@
 + (NSArray *)contentsAtPath:(NSString *)path;
 
 + (NSString *)pathForNewAlbum:(NSString *)newAlbumName;
++ (NSString *)pathForAppRaterInfo;
 + (NSString *)pathForMainGallery;
 + (NSString *)pathForDefaultGallery;
 + (NSString *)documentsDir;

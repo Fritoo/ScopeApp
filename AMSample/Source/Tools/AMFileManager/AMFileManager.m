@@ -69,6 +69,10 @@ static AMFileManager *fileManager;
     return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&err];
 }
 
++ (NSString *)pathForAppRaterInfo {
+    return [[AMFileManager documentsDir] stringByAppendingPathComponent:APP_RATER_FILE];
+}
+
 + (NSString *)pathForNewAlbum:(NSString *)newAlbumName {
     return [[AMFileManager pathForMainGallery] stringByAppendingPathComponent:newAlbumName];
 }

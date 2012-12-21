@@ -9,7 +9,7 @@
 #import "AMLauncher.h"
 #import "NSObject+ClassName.h"
 #import "AMSplashScreen.h"
-
+#import "AMUpdater.h"
 
 @implementation AMLauncher
 
@@ -66,9 +66,14 @@ static AMLauncher *launcher;
     
     // Load splash screen
     [AMSplashScreen runSplashWithExpiration:3.2 andFrame:[[UIScreen mainScreen] bounds] withImage:@"MainMenu"];
-    
+
     // Check for update
     //    Prompt to update
+    AMUpdater *updater = [[AMUpdater alloc] init];
+    [updater checkForUpdate];
+    
+    
+    
     // Check for rating
     //    Prompt for rating
     // Load settings
