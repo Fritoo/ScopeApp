@@ -14,8 +14,4 @@
 #define IMAGE_GROW_DURATION 0.15
 
 #define PORTRAIT_SCOPE_RECT CGRectMake (0,0,320,444)
-#define STR_LINK_URL [NSURL URLWithString:@"http://www.schooltr.com/index.html"]
-#define MAIN_GALLERY_FOLDER_NAME @"Gallery"
-#define DEFAULT_ALBUM @"Scope Album"
 
-#define degreesToRadians(x) (M_PI * x / 180.0)

@@ -20,9 +20,10 @@ int main(int argc, char *argv[]) {
 
 //    [AMAppTests executeApplicationTests];
 #endif
+    @autoreleasepool {
+        
+        int retVal = UIApplicationMain(argc, argv, nil, nil);
+        return retVal;
+    }
     
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
-    [pool release];
-    return retVal;
 }
