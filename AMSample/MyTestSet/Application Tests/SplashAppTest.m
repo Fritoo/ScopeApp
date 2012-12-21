@@ -8,6 +8,7 @@
 
 #import "SplashAppTest.h"
 #import "AMAppTests.h"
+#import "NSObject+ClassName.h"
 
 #define COLOR IRON
 

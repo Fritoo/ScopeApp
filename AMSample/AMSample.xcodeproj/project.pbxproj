@@ -207,6 +207,8 @@
 		62E2D1CE16842C1B0015E347 /* AMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1CC16842C1B0015E347 /* AMFileManager.m */; };
 		62E2D1D6168437F70015E347 /* AMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1D5168437F70015E347 /* AMAlbum.m */; };
 		62E2D1D7168437F70015E347 /* AMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1D5168437F70015E347 /* AMAlbum.m */; };
+		62E2D1DF16843A530015E347 /* AMUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1DE16843A530015E347 /* AMUpdater.m */; };
+		62E2D1E016843A530015E347 /* AMUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E2D1DE16843A530015E347 /* AMUpdater.m */; };
 		62FCBC871683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */; };
 		62FCBC881683E0C9008CA14F /* CompareViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */; };
 		62FCBC891683E0C9008CA14F /* AMLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC061683E0C9008CA14F /* AMLayerAdditions.m */; };
@@ -438,6 +440,8 @@
 		62E2D1CC16842C1B0015E347 /* AMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFileManager.m; sourceTree = "<group>"; };
 		62E2D1D4168437F70015E347 /* AMAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAlbum.h; sourceTree = "<group>"; };
 		62E2D1D5168437F70015E347 /* AMAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAlbum.m; sourceTree = "<group>"; };
+		62E2D1DD16843A530015E347 /* AMUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMUpdater.h; sourceTree = "<group>"; };
+		62E2D1DE16843A530015E347 /* AMUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUpdater.m; sourceTree = "<group>"; };
 		62FCBC001683E0C9008CA14F /* CompareViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareViewAppDelegate.h; sourceTree = "<group>"; };
 		62FCBC011683E0C9008CA14F /* CompareViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareViewAppDelegate.m; sourceTree = "<group>"; };
 		62FCBC031683E0C9008CA14F /* AMCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCategories.h; sourceTree = "<group>"; };
@@ -814,9 +818,19 @@
 			path = Album;
 			sourceTree = "<group>";
 		};
+		62E2D1DC16843A530015E347 /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				62E2D1DD16843A530015E347 /* AMUpdater.h */,
+				62E2D1DE16843A530015E347 /* AMUpdater.m */,
+			);
+			path = Updater;
+			sourceTree = "<group>";
+		};
 		62FCBBFB1683E0C9008CA14F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				62E2D1DC16843A530015E347 /* Updater */,
 				62FCBBFF1683E0C9008CA14F /* App Delegate */,
 				62FCBC021683E0C9008CA14F /* Categories */,
 				62FCBC1E1683E0C9008CA14F /* Constants */,
@@ -1603,6 +1617,7 @@
 				62FCBCF61683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */,
 				62E2D1CD16842C1B0015E347 /* AMFileManager.m in Sources */,
 				62E2D1D6168437F70015E347 /* AMAlbum.m in Sources */,
+				62E2D1DF16843A530015E347 /* AMUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1651,6 +1666,7 @@
 				62FCBCF71683E1FA008CA14F /* FiR3FiOBJCReturnTypes.m in Sources */,
 				62E2D1CE16842C1B0015E347 /* AMFileManager.m in Sources */,
 				62E2D1D7168437F70015E347 /* AMAlbum.m in Sources */,
+				62E2D1E016843A530015E347 /* AMUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1680,9 +1696,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1703,7 +1721,7 @@
 				PRODUCT_NAME = AMSample;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = "iphoneos 5.0";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1713,9 +1731,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AMSample_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1732,7 +1752,7 @@
 				);
 				PRODUCT_NAME = AMSample;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = "iphoneos 5.0";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;

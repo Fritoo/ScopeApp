@@ -19,5 +19,8 @@
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
 
+#define DB_URL @"http://localhost/AMCompareView/currentVersion/"
+#define REL_URL @"https://google.com/"
+#define UPDATE_URL ( DEBUG ) ? DB_URL : REL_URL
 
 #endif

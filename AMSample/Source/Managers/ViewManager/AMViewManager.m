@@ -7,7 +7,7 @@
 //
 
 #import "AMViewManager.h"
-#import "AMConstants.h"
+#import "NSObject+ClassName.h"
 
 #define COLOR OCEAN_BLUE
 
@@ -78,6 +78,9 @@ static AMViewManager *viewManager;
         type = 1;
     }
     
+    // Just testing crossfade here...
+    //
+    // TODO: Implement remaining transition types
     if ( type == AMTransitionType_CrossFade ) {
         
         [self.currentViewCon.view insertSubview:b belowSubview:a];
@@ -108,6 +111,7 @@ static AMViewManager *viewManager;
     if ( alphaA < 0.01 ) {
         [timer invalidate];
         timer = nil;
+        [transA removeFromSuperview];
     }
     
 }

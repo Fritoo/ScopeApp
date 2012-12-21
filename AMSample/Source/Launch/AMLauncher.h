@@ -10,4 +10,8 @@
 
 @interface AMLauncher : NSObject
 
+
++ (AMLauncher *)launcher;
++ (void)launch;
+
 @end

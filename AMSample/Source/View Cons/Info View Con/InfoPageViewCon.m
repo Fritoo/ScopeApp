@@ -9,6 +9,7 @@
 #import "InfoPageViewCon.h"
 #import "CompareViewAppDelegate.h"
 #import "ControlPoint.h"
+#import "NSObject+ClassName.h"
 
 @implementation InfoPageViewCon
 

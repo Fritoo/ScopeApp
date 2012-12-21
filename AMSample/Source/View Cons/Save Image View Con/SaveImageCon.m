@@ -10,7 +10,7 @@
 #import "CompareViewAppDelegate.h"
 #import "ControlPoint.h"
 #import "SideBySideCon.h"
-
+#import "NSObject+ClassName.h"
 
 @implementation SaveImageCon
 

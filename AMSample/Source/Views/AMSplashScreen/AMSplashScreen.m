@@ -8,23 +8,43 @@
 
 #import "AMSplashScreen.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NSObject+ClassName.h"
+
 
 #define COLOR MOSS
 static AMSplashScreen *splashScreen = nil;
 
 @implementation AMSplashScreen
 
-+ (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm {
+// Completely self-contained splash screen.
+// Adds itself to window,
+// removes itself when time expires.
+// Not bad if I do say so myself.
+
+
++ (void)runSplashWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName {
     
-    splashScreen = [[AMSplashScreen alloc] initWithLifetime:lifetime andFrame:frm];
+    [[UIWindow mainWindow] addSubview:[AMSplashScreen viewWithExpiration:lifetime
+                                                                andFrame:frm
+                                                               withImage:imgName]];
+    
+}
+
++ (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName {
+    
+    splashScreen = [[AMSplashScreen alloc] initWithLifetime:lifetime
+                                                   andFrame:frm
+                                                  withImage:(NSString *)imgName];
     return splashScreen;
 }
 
 
-- (id)initWithLifetime:(float)lifetime andFrame:(CGRect)frm {
+- (id)initWithLifetime:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName {
     
     if ( self = [super init] ) {
         self.frame = frm;
+        self.image = [UIImage imageNamed:imgName];
+        
         // Start expiration timer
         if ( lifetime < 0.0 ) {
             lifetime = 2.56; // Product of 8 * multiple of 8 (32)
@@ -38,6 +58,16 @@ static AMSplashScreen *splashScreen = nil;
     
     return self;
 }
+
+
+
+- (void)drawRect:(CGRect)rect {
+    
+    [self.image drawInRect:rect];
+    
+}
+
+
 
 - (void)startAnimation {
 

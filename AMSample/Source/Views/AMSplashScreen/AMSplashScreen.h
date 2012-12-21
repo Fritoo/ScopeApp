@@ -17,7 +17,10 @@
     float depth;
 }
 
-+ (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm;
+@property (strong) UIImage *image;
+
++ (void)runSplashWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName;
++ (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName;
 - (void)animateConcurrently;
 - (void)startAnimation;
 
