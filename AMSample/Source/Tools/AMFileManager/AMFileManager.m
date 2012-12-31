@@ -64,13 +64,19 @@ static AMFileManager *fileManager;
     return 0;
 }
 
++ (void)updateDictionaryAtPath:(NSString *)path dictionary:(NSDictionary *)newDict {
+    if ( nil != path && nil != newDict ) {
+        [newDict writeToFile:path atomically:YES];
+    }
+}
+
 + (NSArray *)contentsAtPath:(NSString *)path {
     NSError *err;
     return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&err];
 }
 
 + (NSString *)pathForAppRaterInfo {
-    return [[AMFileManager documentsDir] stringByAppendingPathComponent:APP_RATER_FILE];
+    return [[AMFileManager documentsDir] stringByAppendingPathComponent:ROOT_DIR APP_RATER_FILE];
 }
 
 + (NSString *)pathForNewAlbum:(NSString *)newAlbumName {

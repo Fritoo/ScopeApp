@@ -15,6 +15,8 @@
 		2A7E99A113D4DAC90032409D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7E99A013D4DAC90032409D /* MessageUI.framework */; };
 		622B21CE1684D5BA00E46E62 /* AMAppRater.m in Sources */ = {isa = PBXBuildFile; fileRef = 622B21CD1684D5BA00E46E62 /* AMAppRater.m */; };
 		622B21CF1684D5BA00E46E62 /* AMAppRater.m in Sources */ = {isa = PBXBuildFile; fileRef = 622B21CD1684D5BA00E46E62 /* AMAppRater.m */; };
+		62304DD61691517D00B905B7 /* AMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD51691517D00B905B7 /* AMAlertView.m */; };
+		62304DD71691517D00B905B7 /* AMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD51691517D00B905B7 /* AMAlertView.m */; };
 		625A5D12166B1F0B00F4CA32 /* SplashAppTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */; };
 		625A5D13166B1F0B00F4CA32 /* SplashAppTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */; };
 		625A5D15166B1F0B00F4CA32 /* SplashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D11166B1F0B00F4CA32 /* SplashTest.m */; };
@@ -337,6 +339,8 @@
 		32CA4F630368D1EE00C91783 /* AMSample_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSample_Prefix.pch; sourceTree = "<group>"; };
 		622B21CC1684D5BA00E46E62 /* AMAppRater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMAppRater.h; path = "Source/App Rater/AMAppRater.h"; sourceTree = SOURCE_ROOT; };
 		622B21CD1684D5BA00E46E62 /* AMAppRater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMAppRater.m; path = "Source/App Rater/AMAppRater.m"; sourceTree = SOURCE_ROOT; };
+		62304DD41691517D00B905B7 /* AMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAlertView.h; sourceTree = "<group>"; };
+		62304DD51691517D00B905B7 /* AMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAlertView.m; sourceTree = "<group>"; };
 		625A5D0D166B1F0B00F4CA32 /* SplashAppTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashAppTest.h; sourceTree = "<group>"; };
 		625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashAppTest.m; sourceTree = "<group>"; };
 		625A5D10166B1F0B00F4CA32 /* SplashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashTest.h; sourceTree = "<group>"; };
@@ -616,6 +620,15 @@
 				628042F01555F6C90087838D /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62304DD31691517D00B905B7 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				62304DD41691517D00B905B7 /* AMAlertView.h */,
+				62304DD51691517D00B905B7 /* AMAlertView.m */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 		625A5D0C166B1F0B00F4CA32 /* Application Tests */ = {
@@ -1246,6 +1259,7 @@
 		62FCBCED1683E1FA008CA14F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				62304DD31691517D00B905B7 /* AlertView */,
 				62E2D1CA16842C1B0015E347 /* AMFileManager */,
 				62FCBCEE1683E1FA008CA14F /* ParseMaster */,
 			);
@@ -1625,6 +1639,7 @@
 				62E2D1D6168437F70015E347 /* AMAlbum.m in Sources */,
 				62E2D1DF16843A530015E347 /* AMUpdater.m in Sources */,
 				622B21CE1684D5BA00E46E62 /* AMAppRater.m in Sources */,
+				62304DD61691517D00B905B7 /* AMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,6 +1690,7 @@
 				62E2D1D7168437F70015E347 /* AMAlbum.m in Sources */,
 				62E2D1E016843A530015E347 /* AMUpdater.m in Sources */,
 				622B21CF1684D5BA00E46E62 /* AMAppRater.m in Sources */,
+				62304DD71691517D00B905B7 /* AMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

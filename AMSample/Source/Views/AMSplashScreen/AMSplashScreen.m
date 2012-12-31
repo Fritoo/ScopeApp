@@ -38,6 +38,10 @@ static AMSplashScreen *splashScreen = nil;
     return splashScreen;
 }
 
++ (AMSplashScreen *)currentSplash {
+    return splashScreen;
+}
+
 
 - (id)initWithLifetime:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName {
     

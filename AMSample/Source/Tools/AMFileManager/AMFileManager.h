@@ -15,6 +15,9 @@
 + (int)checkAndBuildPath:(NSString *)path;
 + (NSArray *)contentsAtPath:(NSString *)path;
 
+
++ (void)updateDictionaryAtPath:(NSString *)path dictionary:(NSDictionary *)newDict;
+
 + (NSString *)pathForNewAlbum:(NSString *)newAlbumName;
 + (NSString *)pathForAppRaterInfo;
 + (NSString *)pathForMainGallery;

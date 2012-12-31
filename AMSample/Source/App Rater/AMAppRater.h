@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AMAppRater : NSObject
+extern NSString const *APP_RATE;
+extern NSString const *NUM_LAUNCH;
+
+@interface AMAppRater : NSObject <UIAlertViewDelegate>
 
 
 @property int numAppLaunches;
+@property int rated;
+
+- (id)initWithAppNotifiers;
 
 
 @end

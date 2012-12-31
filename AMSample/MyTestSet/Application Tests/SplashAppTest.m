@@ -28,13 +28,14 @@
     
     Log(@"Testing splash life cycle");
     float lifetime = 5.5f;
-    splash = [AMSplashScreen viewWithExpiration:lifetime andFrame:CGRectMake(100, 100, 100, 100)];
-    splash.backgroundColor = [UIColor greenColor];
-    [[UIWindow mainWindow] addSubview:splash];
-    [splash startAnimation];
+    [AMSplashScreen runSplashWithExpiration:3.2 andFrame:[[UIScreen mainScreen] bounds] withImage:@"MainMenu"];
+
+    splash = [AMSplashScreen currentSplash];
+    NSAssert( splash, @"Splash object returned nil.");
+
     NSTimer *timer = [NSTimer timerWithTimeInterval:lifetime+1 target:self selector:@selector(assertSplash) userInfo:nil repeats:NO];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-    NSAssert(splash, @"Splash object returned nil.");
+    
 }
 
 - (void)assertSplash {

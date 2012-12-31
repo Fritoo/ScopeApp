@@ -21,6 +21,8 @@
 
 + (void)runSplashWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName;
 + (AMSplashScreen *)viewWithExpiration:(float)lifetime andFrame:(CGRect)frm withImage:(NSString *)imgName;
++ (AMSplashScreen *)currentSplash;
+
 - (void)animateConcurrently;
 - (void)startAnimation;
 

@@ -10,6 +10,7 @@
 #import "NSObject+ClassName.h"
 #import "AMSplashScreen.h"
 #import "AMUpdater.h"
+#import "AMAppRater.h"
 
 @implementation AMLauncher
 
@@ -73,11 +74,15 @@ static AMLauncher *launcher;
     [updater checkForUpdate];
     
     
-    
     // Check for rating
     //    Prompt for rating
+    AMAppRater *rater = [[AMAppRater alloc] initWithAppNotifiers];
+    
+    
     // Load settings
     //    Load defaults if no settings found
+    
+    
     // Load last open album
     //    Load blanks if no album used before
     // Load Scope
