@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AMAppTests.h"
 #import "AMLauncher.h"
+#import "CompareViewAppDelegate.h"
 
 
 int main(int argc, char *argv[]) {

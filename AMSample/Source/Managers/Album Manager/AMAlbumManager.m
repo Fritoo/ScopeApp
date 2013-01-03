@@ -9,6 +9,7 @@
 #import "AMAlbumManager.h"
 #import "NSObject+ClassName.h"
 #import "AMFileManager.h"
+#import "AMConstants.h"
 
 #define COLOR CAYANNE
 
@@ -31,7 +32,7 @@ static AMAlbumManager *albumManager;
     
     if ( self = [super init] ) {
         // Do stuff
-        
+        self.currentAlbum = [[AMAlbum alloc] init];
     }
     
     return self;
@@ -55,6 +56,22 @@ static AMAlbumManager *albumManager;
 
 
 - (void)lastAlbumCheck {
+    
+    
+    Log(@"Checking for last open album");
+    NSDictionary *info = [AMFileManager appInfo];
+    
+    // First time
+    // Shouldn't be here by now...
+    if ( nil == info ) {
+        Log(@"App info cache was nil.");
+    } else if ( ![info containsKey:LAST_OPEN_ALBUM] ) {
+        Log(@"Missing key in app info cache for %@", LAST_OPEN_ALBUM);
+    } else {
+        Log(@"Attempting to load in last album items...");
+        self.currentAlbum = [[AMAlbum alloc] initWithPath:[info objectForKey:LAST_OPEN_ALBUM]];
+    }
+    
     
 }
 

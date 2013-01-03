@@ -9,11 +9,11 @@
 #import "AMSettings.h"
 #import "NSObject+ClassName.h"
 #import "AMFileManager.h"
+#import "AMConstants.h"
 
 #define COLOR CANTALOUPE
 
-NSString const *SAVE_TO_ROLL = @"saveToRoll";
-NSString const *LAST_OPEN_ALBUM = @"lastOpenAlbum";
+
 
 @implementation AMSettings
 

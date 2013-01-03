@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Santa Cruz Singers. All rights reserved.
 //
 
-#import "AlbumManagerCon.h"
+#import "AlbumManagerViewCon.h"
 #import "CompareViewAppDelegate.h"
 #import "GalleryViewCon.h"
 #import "NSObject+ClassName.h"

@@ -11,7 +11,7 @@
 #import "MainMenuViewCon.h"
 #import "ControlPoint.h"
 #import "MyViewCon.h"
-
+#import "AMViewController.h"
 
 
 
@@ -37,6 +37,7 @@
 //    
 //    [window.rootViewController.view addSubview:viewController.view];
 //    [viewController setDelegate:self];
+    
     
     [window makeKeyAndVisible];
 	    

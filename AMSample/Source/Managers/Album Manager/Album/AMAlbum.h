@@ -13,4 +13,9 @@
 @property (strong) NSString *path;
 @property (strong) NSMutableDictionary *images;
 
+
+- (id)initWithPath:(NSString *)savedAlbumPath;
+- (void)loadSavedImages;
+- (int)numImages;
+
 @end

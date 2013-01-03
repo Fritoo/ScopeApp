@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AlbumManagerCon.h"
+#import "AlbumManagerViewCon.h"
 
 @interface GalleryViewCon : UIViewController {
     

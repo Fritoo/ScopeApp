@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AMAlbum.h"
 
 @interface AMAlbumManager : NSObject
 
 
-+ (AMAlbumManager *)albumManager;
+@property (strong) AMAlbum *currentAlbum;
 
++ (AMAlbumManager *)albumManager;
+- (void)lastAlbumCheck;
 
 @end

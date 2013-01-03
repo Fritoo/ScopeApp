@@ -12,6 +12,12 @@
 #import "AMUpdater.h"
 #import "AMAppRater.h"
 #import "AMSettingsManager.h"
+#import "AMAlbumManager.h"
+#import "AMViewManager.h"
+#import "AMCategories.h"
+#import "AMViewController.h"
+
+#define COLOR LAVENDER
 
 @implementation AMLauncher
 
@@ -69,7 +75,7 @@ static AMLauncher *launcher;
 - (void)runOpeningSequence:(id)sender {
     
     // Load splash screen
-    [AMSplashScreen runSplashWithExpiration:3.2 andFrame:[[UIScreen mainScreen] bounds] withImage:@"MainMenu"];
+    //[AMSplashScreen runSplashWithExpiration:3.2 andFrame:[[UIScreen mainScreen] bounds] withImage:@"MainMenu"];
 
     // Check for update
     //    Prompt to update
@@ -89,7 +95,29 @@ static AMLauncher *launcher;
     
     // Load last open album
     //    Load blanks if no album used before
+    [[AMAlbumManager albumManager] lastAlbumCheck];
     
+    
+    // Load View Manager       
+    AMViewController *red = [[AMViewController alloc] init];
+    red.view.backgroundColor = [UIColor redColor];
+    red.view.frame = [UIWindow mainWindow].rootViewController.view.bounds;
+    [AMViewManager viewManager].currentViewCon = red;
+    
+    [[UIWindow mainWindow].rootViewController.view addSubview:red.view];
+    
+    AMViewController *blue = [[AMViewController alloc] init];
+    blue.view.frame = [UIWindow mainWindow].rootViewController.view.bounds;
+    blue.view.backgroundColor = [UIColor blueColor];
+    
+    Log(@"w:%@\n"
+        @"a:%@\n"
+        @"b:%@\n",
+        NSStringFromCGRect([UIWindow mainWindow].rootViewController.view.bounds),
+        NSStringFromCGRect(red.view.bounds),
+        NSStringFromCGRect(blue.view.bounds));
+    
+    [[AMViewManager viewManager] transitionFromView:red.view toView:blue.view transitionType:AMTransitionType_SwipeDown duration:0.25];
     
     // Load Scope
     // Load Scope view

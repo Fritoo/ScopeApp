@@ -9,6 +9,8 @@
 #import "AMAlbum.h"
 #import "NSObject+ClassName.h"
 
+#define COLOR IRON
+
 @implementation AMAlbum
 
 - (id)initWithPath:(NSString *)savedAlbumPath {
@@ -18,6 +20,7 @@
         if ( nil != savedAlbumPath ) {
             self.path = savedAlbumPath;
             self.images = [[NSMutableDictionary alloc] init];
+            [self loadSavedImages];
         }
     
     }
@@ -31,8 +34,13 @@
     // Iterate over contents at path
     // and load images into memory
     //
+    NSArray *contents = [AMFileManager contentsAtPath:self.path];
+    if ( nil == contents || contents.count < 1 ) {
+        Log(@"Path contents at \"%@\" are empty. Failed to load images.", self.path);
+        return;
+    }
     
-    for ( id imgFile in [AMFileManager contentsAtPath:self.path] ) {
+    for ( id imgFile in contents ) {
         UIImage *img = [UIImage imageWithContentsOfFile:imgFile];
         if ( nil == img ) {
             LogError(@"Couldn't load image file %@", imgFile);

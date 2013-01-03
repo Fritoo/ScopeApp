@@ -6,9 +6,7 @@
 //
 //
 
-#ifndef AMSample_AMConstants_h
-#define AMSample_AMConstants_h
-
+#import "EnumHeader.h"
 
 #define kAM_NotFound @"none"
 #define kAM_ViewMovedToSuperview @"kAM_ViewMovedToSuperview"
@@ -26,4 +24,9 @@
 #define REL_URL @"https://google.com/"
 #define UPDATE_URL ( DEBUG ) ? DB_URL : REL_URL
 
-#endif
+extern NSString const *SAVE_TO_ROLL;
+extern NSString const *LAST_OPEN_ALBUM;
+extern NSString const *APP_RATE;
+extern NSString const *NUM_LAUNCH;
+
+

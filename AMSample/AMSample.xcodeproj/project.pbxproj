@@ -17,6 +17,14 @@
 		6209FE4E16956F210037417E /* AlbumManagerViewCon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE4C16956F210037417E /* AlbumManagerViewCon.m */; };
 		6209FE5116956F410037417E /* AMAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE5016956F410037417E /* AMAlbumManager.m */; };
 		6209FE5216956F410037417E /* AMAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE5016956F410037417E /* AMAlbumManager.m */; };
+		6209FE541695711A0037417E /* AMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE531695711A0037417E /* AMConstants.m */; };
+		6209FE551695711A0037417E /* AMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE531695711A0037417E /* AMConstants.m */; };
+		6209FE67169583710037417E /* AMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE66169583700037417E /* AMViewController.m */; };
+		6209FE68169583710037417E /* AMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209FE66169583700037417E /* AMViewController.m */; };
+		6209FE6A169585CF0037417E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6209FE69169585CE0037417E /* MainWindow.xib */; };
+		6209FE6B169585CF0037417E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6209FE69169585CE0037417E /* MainWindow.xib */; };
+		6209FE7516958E010037417E /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6209FE7416958E010037417E /* Default-Landscape@2x~ipad.png */; };
+		6209FE7716958E050037417E /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6209FE7616958E050037417E /* Default-Landscape~ipad.png */; };
 		62304DD61691517D00B905B7 /* AMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD51691517D00B905B7 /* AMAlertView.m */; };
 		62304DD71691517D00B905B7 /* AMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD51691517D00B905B7 /* AMAlertView.m */; };
 		625A5D12166B1F0B00F4CA32 /* SplashAppTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 625A5D0E166B1F0B00F4CA32 /* SplashAppTest.m */; };
@@ -79,8 +87,6 @@
 		62FCBCAC1683E0C9008CA14F /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC331683E0C9008CA14F /* Layout.m */; };
 		62FCBCAD1683E0C9008CA14F /* AMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC3A1683E0C9008CA14F /* AMLogger.m */; };
 		62FCBCAE1683E0C9008CA14F /* AMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC3A1683E0C9008CA14F /* AMLogger.m */; };
-		62FCBCAF1683E0C9008CA14F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62FCBC3B1683E0C9008CA14F /* MainWindow.xib */; };
-		62FCBCB01683E0C9008CA14F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62FCBC3B1683E0C9008CA14F /* MainWindow.xib */; };
 		62FCBCB31683E0C9008CA14F /* AMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC421683E0C9008CA14F /* AMSettingsManager.m */; };
 		62FCBCB41683E0C9008CA14F /* AMSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC421683E0C9008CA14F /* AMSettingsManager.m */; };
 		62FCBCB51683E0C9008CA14F /* AMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FCBC451683E0C9008CA14F /* AMSettings.m */; };
@@ -165,6 +171,12 @@
 		6209FE4C16956F210037417E /* AlbumManagerViewCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumManagerViewCon.m; sourceTree = "<group>"; };
 		6209FE4F16956F410037417E /* AMAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAlbumManager.h; sourceTree = "<group>"; };
 		6209FE5016956F410037417E /* AMAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAlbumManager.m; sourceTree = "<group>"; };
+		6209FE531695711A0037417E /* AMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMConstants.m; sourceTree = "<group>"; };
+		6209FE65169583700037417E /* AMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMViewController.h; sourceTree = "<group>"; };
+		6209FE66169583700037417E /* AMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMViewController.m; sourceTree = "<group>"; };
+		6209FE69169585CE0037417E /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6209FE7416958E010037417E /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		6209FE7616958E050037417E /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		62304DD41691517D00B905B7 /* AMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAlertView.h; sourceTree = "<group>"; };
 		62304DD51691517D00B905B7 /* AMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAlertView.m; sourceTree = "<group>"; };
 		625A5D0D166B1F0B00F4CA32 /* SplashAppTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashAppTest.h; sourceTree = "<group>"; };
@@ -230,7 +242,6 @@
 		62FCBC371683E0C9008CA14F /* AMColorLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMColorLogging.h; sourceTree = "<group>"; };
 		62FCBC391683E0C9008CA14F /* AMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLogger.h; sourceTree = "<group>"; };
 		62FCBC3A1683E0C9008CA14F /* AMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLogger.m; sourceTree = "<group>"; };
-		62FCBC3B1683E0C9008CA14F /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		62FCBC411683E0C9008CA14F /* AMSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSettingsManager.h; sourceTree = "<group>"; };
 		62FCBC421683E0C9008CA14F /* AMSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSettingsManager.m; sourceTree = "<group>"; };
 		62FCBC441683E0C9008CA14F /* AMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSettings.h; sourceTree = "<group>"; };
@@ -324,6 +335,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				6209FE7616958E050037417E /* Default-Landscape~ipad.png */,
+				6209FE7416958E010037417E /* Default-Landscape@2x~ipad.png */,
 				62FCBBFB1683E0C9008CA14F /* Source */,
 				625AC6EB167FEF37005D3832 /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -366,6 +379,15 @@
 				6209FE4C16956F210037417E /* AlbumManagerViewCon.m */,
 			);
 			path = AlbumManagerViewCon;
+			sourceTree = "<group>";
+		};
+		6209FE64169583700037417E /* AMViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6209FE65169583700037417E /* AMViewController.h */,
+				6209FE66169583700037417E /* AMViewController.m */,
+			);
+			path = AMViewController;
 			sourceTree = "<group>";
 		};
 		62304DD31691517D00B905B7 /* AlertView */ = {
@@ -473,6 +495,7 @@
 		62FCBBFB1683E0C9008CA14F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6209FE69169585CE0037417E /* MainWindow.xib */,
 				62AF9E68169530B20066181E /* App Rater */,
 				62E2D1DC16843A530015E347 /* Updater */,
 				62FCBBFF1683E0C9008CA14F /* App Delegate */,
@@ -486,7 +509,6 @@
 				62FCBC2E1683E0C9008CA14F /* Launch */,
 				62FCBC311683E0C9008CA14F /* Layout */,
 				62FCBC341683E0C9008CA14F /* Logging */,
-				62FCBC3B1683E0C9008CA14F /* MainWindow.xib */,
 				62FCBC3C1683E0C9008CA14F /* Managers */,
 				62FCBC4F1683E0C9008CA14F /* PressAndHold */,
 				62FCBC541683E0C9008CA14F /* SideBySide */,
@@ -601,6 +623,7 @@
 			isa = PBXGroup;
 			children = (
 				62FCBC1F1683E0C9008CA14F /* AMConstants.h */,
+				6209FE531695711A0037417E /* AMConstants.m */,
 				62FCBC201683E0C9008CA14F /* EnumHeader.h */,
 			);
 			path = Constants;
@@ -762,6 +785,7 @@
 		62FCBC5D1683E0C9008CA14F /* View Cons */ = {
 			isa = PBXGroup;
 			children = (
+				6209FE64169583700037417E /* AMViewController */,
 				6209FE4A16956F210037417E /* AlbumManagerViewCon */,
 				62FCBC5E1683E0C9008CA14F /* AMSample View Con */,
 				62FCBC611683E0C9008CA14F /* Gallery View Con */,
@@ -984,7 +1008,6 @@
 				62FCBCA11683E0C9008CA14F /* Image.xib in Resources */,
 				62FCBCA51683E0C9008CA14F /* ImageViewer.xib in Resources */,
 				62FCBCA71683E0C9008CA14F /* ImageViewer_ipad.xib in Resources */,
-				62FCBCAF1683E0C9008CA14F /* MainWindow.xib in Resources */,
 				62FCBCC11683E0C9008CA14F /* SideBySide.xib in Resources */,
 				62FCBCC31683E0C9008CA14F /* SideBySide_iPad.xib in Resources */,
 				62FCBCCB1683E0C9008CA14F /* GalleryView.xib in Resources */,
@@ -995,6 +1018,9 @@
 				62FCBCDD1683E0C9008CA14F /* SaveImage_ipad.xib in Resources */,
 				62FCBCE31683E0C9008CA14F /* ScopeView.xib in Resources */,
 				62FCBCE71683E0C9008CA14F /* SplashView.xib in Resources */,
+				6209FE6A169585CF0037417E /* MainWindow.xib in Resources */,
+				6209FE7516958E010037417E /* Default-Landscape@2x~ipad.png in Resources */,
+				6209FE7716958E050037417E /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,7 +1033,6 @@
 				62FCBCA21683E0C9008CA14F /* Image.xib in Resources */,
 				62FCBCA61683E0C9008CA14F /* ImageViewer.xib in Resources */,
 				62FCBCA81683E0C9008CA14F /* ImageViewer_ipad.xib in Resources */,
-				62FCBCB01683E0C9008CA14F /* MainWindow.xib in Resources */,
 				62FCBCC21683E0C9008CA14F /* SideBySide.xib in Resources */,
 				62FCBCC41683E0C9008CA14F /* SideBySide_iPad.xib in Resources */,
 				62FCBCCC1683E0C9008CA14F /* GalleryView.xib in Resources */,
@@ -1018,6 +1043,7 @@
 				62FCBCDE1683E0C9008CA14F /* SaveImage_ipad.xib in Resources */,
 				62FCBCE41683E0C9008CA14F /* ScopeView.xib in Resources */,
 				62FCBCE81683E0C9008CA14F /* SplashView.xib in Resources */,
+				6209FE6B169585CF0037417E /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,6 +1115,8 @@
 				62AF9E6B169530B20066181E /* AMAppRater.m in Sources */,
 				6209FE4D16956F210037417E /* AlbumManagerViewCon.m in Sources */,
 				6209FE5116956F410037417E /* AMAlbumManager.m in Sources */,
+				6209FE541695711A0037417E /* AMConstants.m in Sources */,
+				6209FE67169583710037417E /* AMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1169,8 @@
 				62AF9E6C169530B20066181E /* AMAppRater.m in Sources */,
 				6209FE4E16956F210037417E /* AlbumManagerViewCon.m in Sources */,
 				6209FE5216956F410037417E /* AMAlbumManager.m in Sources */,
+				6209FE551695711A0037417E /* AMConstants.m in Sources */,
+				6209FE68169583710037417E /* AMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1185,7 +1215,7 @@
 					"AM_LOGGING=1",
 				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",
@@ -1217,7 +1247,7 @@
 					"AM_PROD_LOGGING=1",
 				);
 				INFOPLIST_FILE = "AMSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../libAirMicro/Release-iphoneos\"",

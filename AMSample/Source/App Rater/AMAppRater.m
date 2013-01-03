@@ -10,12 +10,12 @@
 #import "AMFileManager.h"
 #import "NSObject+ClassName.h"
 #import "AMAlertView.h"
+#import "AMConstants.h"
 
 #define COLOR ORANGE
 
 
-NSString const *APP_RATE = @"appRate";
-NSString const *NUM_LAUNCH = @"numLaunches";
+
 
 @implementation AMAppRater
 
