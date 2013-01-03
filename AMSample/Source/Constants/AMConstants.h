@@ -24,6 +24,9 @@
 #define REL_URL @"https://google.com/"
 #define UPDATE_URL ( DEBUG ) ? DB_URL : REL_URL
 
+
+#define kDeviceRefreshRate .016666667
+
 extern NSString const *SAVE_TO_ROLL;
 extern NSString const *LAST_OPEN_ALBUM;
 extern NSString const *APP_RATE;

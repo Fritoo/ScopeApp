@@ -117,7 +117,7 @@ static AMLauncher *launcher;
         NSStringFromCGRect(red.view.bounds),
         NSStringFromCGRect(blue.view.bounds));
     
-    [[AMViewManager viewManager] transitionFromView:red.view toView:blue.view transitionType:AMTransitionType_SwipeDown duration:0.25];
+    [[AMViewManager viewManager] transitionFromView:red.view toView:blue.view transitionType:AMTransitionType_SwipeDown duration:1.0];
     
     // Load Scope
     // Load Scope view

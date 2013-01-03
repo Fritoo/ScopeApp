@@ -8,6 +8,7 @@
 
 #import "AMViewManager.h"
 #import "NSObject+ClassName.h"
+#import "AMConstants.h"
 
 #define COLOR OCEAN_BLUE
 
@@ -30,7 +31,7 @@ static AMViewManager *viewManager;
     
     if ( self = [super init] ) {
         // Do stuff
-        scale = [[UIScreen mainScreen] bounds].size.height;
+        scale = [[UIWindow mainWindow] rootViewController].view.frame.size.height;
     }
     
     return self;
@@ -61,6 +62,9 @@ static AMViewManager *viewManager;
 }
 
 - (int)transitionFromView:(UIView *)a toView:(UIView *)b transitionType:(AMTransitionType)type duration:(float)duration {
+    
+    // temp Debug
+    count = 0;
     
     int success = 0;
     
@@ -109,8 +113,10 @@ static AMViewManager *viewManager;
         
     }
 
+    // 0.0       .25      .5       .75      1
+    //  |--------|--------|--------|--------|
     
-    NSTimer *timer = [NSTimer timerWithTimeInterval:duration/60 target:self selector:@selector(incrementTransition:) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:kDeviceRefreshRate target:self selector:@selector(incrementTransition:) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 
     
@@ -120,30 +126,48 @@ static AMViewManager *viewManager;
 
 - (void)incrementTransition:(NSTimer *)timer {
     
+    // Temp debug
+    count++;
+    
     transA.alpha = alphaA;
     transB.alpha = alphaB;
     
-    float div = transDuration / 60;
-    alphaA -= div;
-    alphaB += div;
+    float div = transDuration / kDeviceRefreshRate;
+    float decAlpha = 1/div;
+    
+    float dist = scale / div;
+    
+    alphaA -= decAlpha;
+    alphaB += decAlpha;
     
     if ( self.currentTransition == AMTransitionType_SwipeDown ) {
-        
-        Log(@"%@", NSStringFromCGRect(transA.bounds));
-        
+               
         CGPoint org = transA.bounds.origin;
         CGSize siz = transA.bounds.size;
-
-        // TODO: Fix transition times and calcuation
-        // of distances
-        org = (CGPoint){ org.x, org.y -= div};
+        org = (CGPoint){ org.x, org.y -= dist};
 
         CGRect updateRect = { org, siz };
         transA.bounds = updateRect;
+        transB.bounds = CGRectOffset(updateRect, 0, -siz.height);
+        Log(@"\n%@\n%@", NSStringFromCGRect(transA.bounds), NSStringFromCGRect(transB.bounds));
+        
+    } else if ( self.currentTransition == AMTransitionType_SwipeUp ) {
+        
+        CGPoint org = transA.bounds.origin;
+        CGSize siz = transA.bounds.size;
+        
+        // TODO: Fix transition times and calcuation
+        // of distances
+        org = (CGPoint){ org.x, org.y -= dist};
+        
+        CGRect updateRect = { org, siz };
+        transA.bounds = updateRect;
     }
+
     
     
-    if ( alphaA < 0.01 ) {
+    
+    if ( count >= div ) {
         [timer invalidate];
         timer = nil;
         [transA removeFromSuperview];

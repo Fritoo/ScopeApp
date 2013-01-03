@@ -11,6 +11,9 @@
 
 @interface AMViewManager : NSObject {
     
+    // Temp debug
+    int count;
+    
     float alphaA;
     float alphaB;
     float transDuration;
