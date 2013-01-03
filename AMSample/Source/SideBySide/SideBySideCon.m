@@ -140,7 +140,7 @@
 
 - (void)setCurrentAlbumTitle: (NSString *)t {
     
-    if ( !t ) currentAlbumTitle = DEFAULT_ALBUM;
+    if ( !t ) currentAlbumTitle = @"";//DEFAULT_ALBUM;
         else currentAlbumTitle = t;
     
     if (barLabel) barLabel.text = currentAlbumTitle; 
@@ -151,16 +151,16 @@
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:@"" ];//]MAIN_GALLERY_FOLDER_NAME];
     
     fullPath = [fullPath stringByAppendingPathComponent:currentAlbumTitle];
-    currentAlbumPath = [fullPath retain];
+    currentAlbumPath = fullPath;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     NSError *theError = nil;
     
-    self->dirContents = [[fileManager contentsOfDirectoryAtPath:fullPath error:&theError] retain];
+    self->dirContents = [fileManager contentsOfDirectoryAtPath:fullPath error:&theError];
     
     
 }
@@ -485,8 +485,6 @@
     [newLiveView setAlpha:1.0];
     
     [UIView commitAnimations];
-
-    [newLiveView release];
     
 }
 

@@ -15,6 +15,9 @@
 
 @property (strong) AMSettings *settings;
 
++ (AMSettingsManager *)settingsManager;
+
+
 - (int)shouldSaveToPhotoRoll;
 - (void)setShouldSaveToPhotoRoll:(BOOL)shouldSave;
 

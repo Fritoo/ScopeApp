@@ -23,20 +23,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    [self loadUserSettings];
-    
-    self->thePoint = [[ControlPoint alloc] init];
+//    [self loadUserSettings];
+//    
+//    self->thePoint = [[ControlPoint alloc] init];
     
     
     /*We do this since it gives us a base view controller
      that we can set our interface orientations with. That's
      really the only reason the damned thing is there.*/
-    self->theRootViewCon = [[MyViewCon alloc] init];
-    window.rootViewController = theRootViewCon;
-    
-    
-    [window.rootViewController.view addSubview:viewController.view];
-    [viewController setDelegate:self];
+//    self->theRootViewCon = [[MyViewCon alloc] init];
+//    window.rootViewController = theRootViewCon;
+//    
+//    
+//    [window.rootViewController.view addSubview:viewController.view];
+//    [viewController setDelegate:self];
     
     [window makeKeyAndVisible];
 	    
@@ -66,7 +66,6 @@
     if ( viewController )
     {
         [viewController.view removeFromSuperview];
-        [viewController release];
         self->viewController = nil;
     }
     
@@ -86,21 +85,6 @@
 - (BOOL)shouldSaveToCameraRoll { return shouldSaveToCameraRoll; }
 - (void)setSoundOn: (BOOL)onOff { soundOn = onOff; }
 - (void)setShouldSaveToCameraRoll: (BOOL)onOff { shouldSaveToCameraRoll = onOff; }
-
-
-
-- (void)dealloc {
- 
-    if ( viewController )
-    {
-        [viewController.view removeFromSuperview];
-        [viewController release];
-        self->viewController = nil;
-    }
-    
-    [window release];
-    [super dealloc];
-}
 
 
 @end

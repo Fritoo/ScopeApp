@@ -8,6 +8,10 @@
 
 
 
+extern NSString const *SAVE_TO_ROLL;
+extern NSString const *LAST_OPEN_ALBUM;
+
+
 @interface AMSettings : NSObject
 
 @property BOOL saveToPhotoRoll;

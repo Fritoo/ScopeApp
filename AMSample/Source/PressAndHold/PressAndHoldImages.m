@@ -30,7 +30,6 @@
 
 - (void)setOwner_:(id)newOwner {
     if (newOwner) owner_ = newOwner;
-    [owner_ retain];
 }
 
 - (UIView *)getOwner_ {
@@ -166,8 +165,8 @@
     
         CGPoint point = [[touches anyObject] locationInView:self];
     
-        if ( !(self.center.x + self.frame.size.width / 2 >= CGRectGetMaxX(self.superview.frame) ||
-            self.center.x - self.frame.size.width / 2 <= CGRectGetMaxX([[self.superview sidePanelView] frame])) )
+        if ( !(self.center.x + self.frame.size.width / 2 >= CGRectGetMaxX(self.superview.frame) ) )
+//               || self.center.x - self.frame.size.width / 2 <= CGRectGetMaxX([[self.superview sidePanelView] frame])) )
         {
             float theX = point.x - location.x;
             float theY = point.y - location.y;
@@ -272,12 +271,6 @@
 - (BOOL)canBecomeFirstResponder { return YES; }
 - (BOOL)canResignFirstResponder { return YES; }
 
--  (void)dealloc
-{
-    [longPress release];
-    self->longPress = nil;
-    
-    [super dealloc];
-}
+
 
 @end

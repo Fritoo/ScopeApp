@@ -18,7 +18,7 @@
     
 }
 
-@property (retain) NSString *albumTitle;
+@property (strong) NSString *albumTitle;
 
 - (void)loadAlbumData;
 - (void)loadImageRepresentation;

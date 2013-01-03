@@ -11,36 +11,35 @@
 #import "NSObject+ClassName.h"
 #import "AMAlertView.h"
 
+#define COLOR ORANGE
+
+
 NSString const *APP_RATE = @"appRate";
 NSString const *NUM_LAUNCH = @"numLaunches";
 
-
 @implementation AMAppRater
 
-
-- (id)initWithAppNotifiers {
+- (void)prepare {
     
-    if ( self = [super init] ) {
-        
-        [self buildObservers];
-        
-        // Pull saved data
-        // TODO: Test me
-        [AMFileManager checkAndBuildPath:[AMFileManager pathForAppRaterInfo]];
-        NSDictionary *items = [NSDictionary dictionaryWithContentsOfFile:[AMFileManager pathForAppRaterInfo]];
-        
-        // Load defaults if none on
-        // disk
-        if ( nil == items ) {
-            Log(@"No app rater info.");
-            items = [self defaults];
-            self.rated = 0;
-            self.numAppLaunches = 1;
-        }
-        
+    [self buildObservers];
+    
+    // Pull saved data
+    // TODO: Test me
+    [AMFileManager checkAndBuildPath:[AMFileManager pathForAppInfo]];
+    NSDictionary *items = [AMFileManager appInfo];
+    
+    // Load defaults if none on
+    // disk
+    if ( nil == items ) {
+        Log(@"No app rater info. Setting defaults.");
+        [self setDefaults];
+    } else if ( ![items containsKey:APP_RATE] ) {
+        [self setDefaults];
     }
     
-    return self;
+    Log(@"Updating app rater state");
+    [AMFileManager updateAppInfo:[self currentState]];
+
 }
 
 
@@ -56,6 +55,13 @@ NSString const *NUM_LAUNCH = @"numLaunches";
                                              selector:@selector(appEnteringBackground:)
                                                  name:UIApplicationDidEnterBackgroundNotification
                                                object:nil];
+
+}
+
+- (void)setDefaults {
+    
+    self.rated = 0;
+    self.numAppLaunches = 1;
 
 }
 
@@ -97,7 +103,7 @@ NSString const *NUM_LAUNCH = @"numLaunches";
 - (void)handleExit {
     
     // Update state to disk
-    [AMFileManager updateDictionaryAtPath:[AMFileManager pathForAppRaterInfo]
+    [AMFileManager updateDictionaryAtPath:[AMFileManager pathForAppInfo]
                                dictionary:[self currentState]];
     
 }

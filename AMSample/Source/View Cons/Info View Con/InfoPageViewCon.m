@@ -89,7 +89,6 @@
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Your email didn't go through"  delegate:self cancelButtonTitle:@"Try Later" otherButtonTitles:@"Retry", nil];
 		alert.tag = 1111;
 		[alert show];
-		[alert release];
 		[self dismissModalViewControllerAnimated:YES];
         
 	}
@@ -98,7 +97,6 @@
 	else 
     {
 		[self dismissModalViewControllerAnimated:YES];
-        if ( [controller retainCount] > 0 ) [controller release];
 	}
 	
 }

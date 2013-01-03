@@ -28,6 +28,9 @@ static AMSettingsManager *settingsManager;
     
     if ( self = [super init] ) {
         // Do stuff
+        if ( nil == self.settings ) {
+            self.settings = [[AMSettings alloc] init];
+        }
     }
     
     return self;
@@ -49,6 +52,8 @@ static AMSettingsManager *settingsManager;
 }
 
 
+
+#pragma mark - Set & Get
 - (int)shouldSaveToPhotoRoll {
     return self.settings.saveToPhotoRoll;
 }

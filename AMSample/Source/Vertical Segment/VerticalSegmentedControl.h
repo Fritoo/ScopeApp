@@ -21,7 +21,7 @@
 @property (readonly) int selectedSegment;
 @property (readonly) float verticalSpacing;
 @property (readonly) float verticalHeight;
-@property (retain) id delegate;
+@property (strong) id delegate;
 
 
 - (NSString *)stringRepresentationOfNumber: (int)number;

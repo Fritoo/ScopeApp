@@ -101,7 +101,6 @@ didFinishSavingWithError:(NSError *)error
 		NSLog(@" amControl - release!");
 		[airmicro stopCapture];
 		airmicro.hidden=YES;
-		[airmicro release];
 		airmicro=nil;
 	}
 }
@@ -130,10 +129,5 @@ didFinishSavingWithError:(NSError *)error
 	// e.g. self.myOutlet = nil;
 }
 
-
-- (void)dealloc {
-	[airmicro release];
-    [super dealloc];
-}
 
 @end

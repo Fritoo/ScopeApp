@@ -21,7 +21,7 @@
     ContainerState _containerState;
 }
 
-@property (readonly, retain) UILongPressGestureRecognizer *longPress;
+@property (readonly, strong) UILongPressGestureRecognizer *longPress;
 @property (readonly, getter = getDragState) DragState _dragState;
 @property int intendedViewContainer;
 

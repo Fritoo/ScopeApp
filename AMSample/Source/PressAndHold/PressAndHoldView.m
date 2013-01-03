@@ -48,7 +48,6 @@
 
 - (void)setOwner_:(id)newOwner {
     if (newOwner) owner_ = newOwner;
-    [owner_ retain];
 }
 
 - (UIView *)getOwner_ {
@@ -148,23 +147,6 @@
 - (BOOL)canBecomeFirstResponder { return YES; }
 - (BOOL)canResignFirstResponder { return YES; }
 
--  (void)dealloc
-{
-    if ( layoutContainer ) self->layoutContainer = nil;
-    if ( startingSuperview ) {
-        [startingSuperview release];
-        self->startingSuperview = nil;
-    }
-    if ( liveImageView ) {
-        
-        [liveImageView release];
-        self->liveImageView = nil;
-        
-    }
-    
-    
-    [super dealloc];
-}
 
 
 /*

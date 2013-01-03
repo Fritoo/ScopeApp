@@ -17,7 +17,6 @@ extern NSString const *NUM_LAUNCH;
 @property int numAppLaunches;
 @property int rated;
 
-- (id)initWithAppNotifiers;
-
+- (void)prepare;
 
 @end

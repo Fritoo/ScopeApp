@@ -9,6 +9,7 @@
 #import "AMFileManager.h"
 #import "NSObject+ClassName.h"
 
+#define COLOR FUSCIA
 @implementation AMFileManager
 
 
@@ -64,7 +65,25 @@ static AMFileManager *fileManager;
     return 0;
 }
 
++ (void)updateAppInfo:(NSDictionary *)newContent {
+    
+    // Just add the new entries
+    [[AMFileManager fileManager].cachedFiles addEntriesFromDictionary:newContent];
+    Log(@"Adding new entries to cached app info dict\n%@", [AMFileManager fileManager].cachedFiles);
+    
+}
+
++ (void)saveAppInfoToDisk {
+    
+    // Save to disk
+    [AMFileManager updateDictionaryAtPath:[AMFileManager pathForAppInfo]
+                               dictionary:fileManager.cachedFiles];
+    Log(@"Saving app info to disk");
+    
+}
+
 + (void)updateDictionaryAtPath:(NSString *)path dictionary:(NSDictionary *)newDict {
+    
     if ( nil != path && nil != newDict ) {
         [newDict writeToFile:path atomically:YES];
     }
@@ -75,8 +94,26 @@ static AMFileManager *fileManager;
     return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&err];
 }
 
-+ (NSString *)pathForAppRaterInfo {
-    return [[AMFileManager documentsDir] stringByAppendingPathComponent:ROOT_DIR APP_RATER_FILE];
++ (NSDictionary *)appInfo {
+    
+    
+    // Cache file so we don't have to
+    // keep r/w to disk
+    if ( nil == [AMFileManager fileManager].cachedFiles ) {
+        fileManager.cachedFiles = [NSDictionary dictionaryWithContentsOfFile:[AMFileManager pathForAppInfo]];
+        
+        // Never been created before
+        if ( nil == fileManager.cachedFiles ) {
+            [AMFileManager fileManager].cachedFiles = [[NSMutableDictionary alloc] init];
+        }
+    }
+    
+    return [AMFileManager fileManager].cachedFiles;
+       
+}
+
++ (NSString *)pathForAppInfo {
+    return [[AMFileManager documentsDir] stringByAppendingPathComponent:ROOT_DIR APP_INFO_FILE];
 }
 
 + (NSString *)pathForNewAlbum:(NSString *)newAlbumName {
@@ -101,6 +138,8 @@ static AMFileManager *fileManager;
     // eg: ...$thisiPhone/thisAppsHash/Library/Chaches
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 }
+
+
 
 
 @end

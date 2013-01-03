@@ -117,11 +117,10 @@
         /*If it already exists, reset it.*/
         if ( partnerButtons[i] ) {
             [partnerButtons[i] removeFromSuperview];
-            [partnerButtons[i] release];
         }    
         
         
-        partnerButtons[i] = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+        partnerButtons[i] = [UIButton buttonWithType:UIButtonTypeCustom];
         
         
         /*Do some initialization.*/

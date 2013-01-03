@@ -49,10 +49,10 @@ typedef enum ImageLayout
     
 }
 
-@property (readonly) IBOutlet TogglingScrollview *clientImagesScroller;
-@property (readonly, retain) IBOutlet UIView *sidePanelView;
-@property (retain) IBOutlet PressAndHoldView *liveViewContainer;
-@property (retain) NSString *currentAlbumTitle;
+@property (unsafe_unretained, readonly) IBOutlet TogglingScrollview *clientImagesScroller;
+@property (readonly, strong) IBOutlet UIView *sidePanelView;
+@property (strong) IBOutlet PressAndHoldView *liveViewContainer;
+@property (strong) NSString *currentAlbumTitle;
 
 
 - (void)setCurrentAlbumTitle: (NSString *)t;

@@ -66,7 +66,7 @@
 
 - (GalleryViewCon *)gallery {return gallery;}
 - (void)setGallery: (GalleryViewCon *)theGallery {gallery = theGallery;}
-- (void)setPath: (NSString *)thePath { self->path = [thePath retain]; }
+- (void)setPath: (NSString *)thePath { self->path = thePath; }
 
 
 @end
@@ -116,8 +116,6 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setFont:[UIFont fontWithName:@"Helvetica" size:13]];
     [image addSubview:label];
-    [label release];
-    [theName release];
     
     return image;
 }
@@ -193,10 +191,10 @@
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:@""];//MAIN_GALLERY_FOLDER_NAME];
     
     
-    if ( !albumTitle ) albumTitle = DEFAULT_ALBUM;
+    if ( !albumTitle ) albumTitle = @"";//DEFAULT_ALBUM;
     
     fullPath = [fullPath stringByAppendingPathComponent:albumTitle];
     
@@ -208,7 +206,7 @@
     NSError *theError = nil;
     
     
-    self->dirContents = [[fileManager contentsOfDirectoryAtPath:fullPath error:&theError] retain];
+    self->dirContents = [fileManager contentsOfDirectoryAtPath:fullPath error:&theError];
     
 }
 
@@ -247,7 +245,7 @@
         {
             if ( [[fileName pathExtension] isEqualToString:@"png"] )
             {
-                fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
+                fullPath = [documentsDirectory stringByAppendingPathComponent:@""];// MAIN_GALLERY_FOLDER_NAME];
                 fullPath = [fullPath stringByAppendingPathComponent:albumTitle];
                 fullPath = [fullPath stringByAppendingPathComponent:fileName];
                 ImageRep *theImage = [IconMaker imageRepForFilename:fullPath]; 

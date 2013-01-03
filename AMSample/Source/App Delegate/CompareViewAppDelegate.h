@@ -23,8 +23,8 @@
     
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet SplashViewCon *viewController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet SplashViewCon *viewController;
 
 - (ControlPoint *)controlPoint;
 - (void)completedSplash;

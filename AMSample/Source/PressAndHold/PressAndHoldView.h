@@ -28,10 +28,10 @@
 
 }
 
-@property (readonly, retain) UILongPressGestureRecognizer *longPress;
+@property (readonly, strong) UILongPressGestureRecognizer *longPress;
 @property (readonly, getter = getDragState) DragState _dragState;
-@property (retain) UIView *startingSuperview;
-@property (retain)  ScopeViewCon *liveImageView;
+@property (strong) UIView *startingSuperview;
+@property (strong)  ScopeViewCon *liveImageView;
 @property int intendedViewContainer;
 
 - (void)setOwner_:(id)newOwner;

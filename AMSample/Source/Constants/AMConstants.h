@@ -17,7 +17,7 @@
 #define ROOT_DIR @"AMCompareView/"
 #define MAIN_GALLERY_FOLDER_NAME @"Gallery"
 #define DEFAULT_ALBUM @"Scope Album"
-#define APP_RATER_FILE ROOT_DIR @"am.plist"
+#define APP_INFO_FILE ROOT_DIR @"am.plist"
 #define NUM_LAUNCHES 
 
 #define degreesToRadians(x) (M_PI * x / 180.0)

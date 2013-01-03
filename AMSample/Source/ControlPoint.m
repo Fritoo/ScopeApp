@@ -42,7 +42,6 @@
         
         else
         {
-            [disposalObject release];
             disposalObject = nil;
         }
         
@@ -54,7 +53,6 @@
 - (void)completedAnimation
 {
     [[disposalObject view] removeFromSuperview];
-    [disposalObject release];
     self->disposalObject = nil;
 //    printf("objectRetainCount: %d", [disposalObject retainCount]);
 

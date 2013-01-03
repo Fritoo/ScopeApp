@@ -14,7 +14,7 @@
     
 }
 
-@property (retain) id mainViewCon;
+@property (strong) id mainViewCon;
 
 - (void)makeAlbumNamed: (NSString *)albumName;
 - (void)updateTableContent;

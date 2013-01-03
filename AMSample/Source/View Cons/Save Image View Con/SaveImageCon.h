@@ -18,10 +18,10 @@
 }
 
     
-@property (retain) IBOutlet UIImageView *tempImageView;
-@property (retain) IBOutlet UITextField *textF;
-@property (retain) NSString *albumTitle;
-@property (retain) IBOutlet AlbumManagerCon *albumManagerCon;
+@property (strong) IBOutlet UIImageView *tempImageView;
+@property (strong) IBOutlet UITextField *textF;
+@property (strong) NSString *albumTitle;
+@property (strong) IBOutlet AlbumManagerCon *albumManagerCon;
 
 
 - (IBAction)pressedCancel:(id)sender;

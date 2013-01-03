@@ -20,7 +20,7 @@
 
 }
 
-@property (retain) AMImageView *scopeView;
+@property (strong) AMImageView *scopeView;
 
 
 - (IBAction)toggleLiveFeed;

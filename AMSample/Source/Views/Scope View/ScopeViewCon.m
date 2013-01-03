@@ -142,7 +142,6 @@
     {
         [scopeView stopCapture];
         [scopeView removeFromSuperview];
-        [scopeView release];
         self->scopeView = nil;
     }
     
@@ -197,7 +196,7 @@
     
     if ( !album ) {
         if ( del.controlPoint.sideBySideCon.currentAlbumTitle ) album = del.controlPoint.sideBySideCon.currentAlbumTitle;
-        else { album = DEFAULT_ALBUM; }
+//        else { album = DEFAULT_ALBUM; }
     }
 
     
@@ -222,7 +221,7 @@
     //Get default file path for gallery
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:MAIN_GALLERY_FOLDER_NAME];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:@""] ;//]MAIN_GALLERY_FOLDER_NAME];
     fullPath = [fullPath stringByAppendingPathComponent:album];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -263,8 +262,6 @@
     popUp.alpha = 0.0f;
     
     [UIView commitAnimations];
-    
-    [popUp release];
 
     
 
@@ -277,7 +274,7 @@
 {
     if ( alertView.tag == 1111 )
     {
-        if ( buttonIndex > 0 ) [self filePictureWithName:alertField.text];
+//        if ( buttonIndex > 0 ) [self filePictureWithName:alertField.text];
 
     }
 }
@@ -348,53 +345,6 @@ didFinishSavingWithError:(NSError *)error
 
 
 
-
-
-
-
-
-
-
-
-- (void)dealloc
-{
-
-    
-    
-    if ( alertField ){
-        [alertField removeFromSuperview];
-        self->alertField = nil;
-    }
-    
-    if ( tempImage ) {
-        
-        self->tempImage = nil;
-    }
-
-    
-    if ( liveFeed )
-    {
-        [liveFeed release];
-        self->liveFeed = nil;
-    }
-    
-    if ( stillFeed )
-    {
-        [stillFeed release];
-        self->stillFeed = nil;
-    }
-    
-    if ( scopeView ) 
-    {
-        [scopeView stopCapture];
-        [scopeView removeFromSuperview];
-        [scopeView release];
-        self->scopeView = nil;
-    }
-
-    [super dealloc];
-        
-}
 
 
 

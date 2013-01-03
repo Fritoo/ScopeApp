@@ -146,40 +146,5 @@
 }
 
 
-    
-- (void)dealloc
-{
-    
-    if ( slideShowTimer)
-    {
-        [slideShowTimer invalidate];
-        self->slideShowTimer = nil;
-    }
-
-    
-    if ( svContent )
-    {
-        [svContent removeFromSuperview];
-        [svContent release];
-//        self->svContent = nil;
-    }
-
-    if ( scView )
-    {
-        [scView removeFromSuperview];
-        [scView release];
-        //        self->svContent = nil;
-    }
-
-    if ( slidePageControl )
-    {
-        [slidePageControl removeFromSuperview];
-        [slidePageControl release];
-        //        self->svContent = nil;
-    }
-
-    [super dealloc];
-    
-}
 
 @end

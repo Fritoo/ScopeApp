@@ -11,6 +11,7 @@
 #import "AMSplashScreen.h"
 #import "AMUpdater.h"
 #import "AMAppRater.h"
+#import "AMSettingsManager.h"
 
 @implementation AMLauncher
 
@@ -61,6 +62,8 @@ static AMLauncher *launcher;
 
 - (void)appIsActive:(id)sender {
     
+    [self runOpeningSequence:sender];
+    
 }
 
 - (void)runOpeningSequence:(id)sender {
@@ -76,15 +79,18 @@ static AMLauncher *launcher;
     
     // Check for rating
     //    Prompt for rating
-    AMAppRater *rater = [[AMAppRater alloc] initWithAppNotifiers];
+    AMAppRater *rater = [[AMAppRater alloc] init];
+    [rater prepare];
     
     
     // Load settings
     //    Load defaults if no settings found
-    
+    [AMSettingsManager settingsManager];
     
     // Load last open album
     //    Load blanks if no album used before
+    
+    
     // Load Scope
     // Load Scope view
     //    Notify if no scope view

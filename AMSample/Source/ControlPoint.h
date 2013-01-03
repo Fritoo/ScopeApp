@@ -42,7 +42,7 @@ typedef enum NavigationDirection {
     id disposalObject;
 }
 
-@property (retain) SideBySideCon *sideBySideCon;
+@property (strong) SideBySideCon *sideBySideCon;
 
 
 - (void)killThis: (id)object hasView: (BOOL)hasView;

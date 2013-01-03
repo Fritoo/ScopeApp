@@ -89,7 +89,7 @@
 - (void)secondHalfSpinFinished
 {
     logo.transform = CGAffineTransformIdentity;
-    if ( delegate ) [delegate performSelector:@selector(completedSplash) withObject:nil afterDelay:1.0];
+//    if ( delegate ) [delegate performSelector:@selector(completedSplash) withObject:nil afterDelay:1.0];
 //  [window addSubview:viewController.view];
     
 }

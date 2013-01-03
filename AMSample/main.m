@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AMAppTests.h"
+#import "AMLauncher.h"
+
 
 int main(int argc, char *argv[]) {
     
@@ -22,6 +24,7 @@ int main(int argc, char *argv[]) {
 #endif
     @autoreleasepool {
         
+        [AMLauncher launch];
         int retVal = UIApplicationMain(argc, argv, nil, nil);
         return retVal;
     }
